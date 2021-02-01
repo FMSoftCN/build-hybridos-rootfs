@@ -328,6 +328,9 @@ comment "Graphic libraries"
 	source "package/sdl2_ttf/Config.in"
 	source "package/tk/Config.in"
 
+comment "MiniGUI"
+	source "package/minigui/Config.in"
+
 comment "Other GUIs"
 	source "package/qt5/Config.in"
 if BR2_PACKAGE_QT5
