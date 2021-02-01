@@ -1,0 +1,24 @@
+diff --git a/configure.ac b/configure.ac
+index 600422e..8471fff 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -8,13 +8,13 @@ dnl ========================================================================
+ dnl Checks for programs.
+ AC_PROG_MAKE_SET
+ 
+-AC_CHECK_FILE(font/extra-fonts/9x18-iso8859-1.bin, guess_mgedition="svn", guess_mgedition="rel")
++#AC_CHECK_FILE(font/extra-fonts/9x18-iso8859-1.bin, guess_mgedition="svn", guess_mgedition="rel")
+ 
+-if test "x$guess_mgedition" = "xrel"; then
+-  AC_CHECK_FILE(font/song-12-gb2312.bin, with_mgedition="se", with_mgedition="ve")
+-else
+-  AC_ARG_WITH(mgedition, [  --with-mgedition=ve/se/pe/ee])
+-fi
++#if test "x$guess_mgedition" = "xrel"; then
++#  AC_CHECK_FILE(font/song-12-gb2312.bin, with_mgedition="se", with_mgedition="ve")
++#else
++#  AC_ARG_WITH(mgedition, [  --with-mgedition=ve/se/pe/ee])
++#fi
+ 
+ ADOBE_FONTS=" \
+ AdobeVFPrototype.ttf \
