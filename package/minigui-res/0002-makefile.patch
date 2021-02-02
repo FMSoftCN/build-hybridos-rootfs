@@ -1,0 +1,11 @@
+diff --git a/Makefile.am b/Makefile.am
+index 1d572b3..473ff49 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -1,5 +1,5 @@
+ AUTOMAKE_OPTIONS=foreign
+ 
+-SUBDIRS = bmp cursor font icon adobe-fonts
++SUBDIRS = bmp cursor icon
+ 
+ EXTRA_DIST = README.md INSTALL

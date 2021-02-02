@@ -10,4 +10,11 @@ define MINIGUI_RES_RUN_AUTOGEN
 endef
 MINIGUI_RES_PRE_CONFIGURE_HOOKS += MINIGUI_RES_RUN_AUTOGEN
 
+define MINIGUI_RES_INSTALL_FONT
+    $(INSTALL) -d $(TARGET_DIR)/usr/share/minigui/res/font
+    $(INSTALL) -c -m 644 $(MINIGUI_RES_PKGDIR)/SourceHanSansCN-Regular.otf \
+        $(TARGET_DIR)/usr/share/minigui/res/font
+endef
+MINIGUI_RES_POST_INSTALL_TARGET_HOOKS += MINIGUI_RES_INSTALL_FONT
+
 $(eval $(autotools-package))
