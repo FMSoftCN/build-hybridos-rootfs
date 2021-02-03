@@ -1,0 +1,7 @@
+config BR2_PACKAGE_MGEFF
+	bool "mGEff"
+	select BR2_PACKAGE_MINIGUI
+	select BR2_PACKAGE_MGPLUS
+	help
+          http://www.minigui.org
+
