@@ -1,0 +1,19 @@
+diff --git a/meson.build b/meson.build
+index 27a7b19..42b56df 100644
+--- a/meson.build
++++ b/meson.build
+@@ -539,10 +539,10 @@ configure_file(output: 'config.h', configuration: pango_conf)
+ root_inc = include_directories('.')
+ 
+ subdir('pango')
+-subdir('utils')
+-subdir('examples')
+-subdir('tests')
+-subdir('tools')
++#subdir('utils')
++#subdir('examples')
++#subdir('tests')
++#subdir('tools')
+ 
+ if get_option('gtk_doc')
+   subdir('docs')

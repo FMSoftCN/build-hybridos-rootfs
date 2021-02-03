@@ -1,0 +1,17 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 823ef4b..3b56914 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.10)
+ 
+ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+ 
+-set(HYBRIDOS_ROOT_PATH "$ENV{HYBRIDOS_OUTPUT_ROOT}")
+-INCLUDE_DIRECTORIES("${HYBRIDOS_ROOT_PATH}/include" "${HYBRIDOS_ROOT_PATH}/usr/include")
+-LINK_DIRECTORIES("${HYBRIDOS_ROOT_PATH}/lib" "${HYBRIDOS_ROOT_PATH}/usr/lib")
++#set(HYBRIDOS_ROOT_PATH "$ENV{HYBRIDOS_OUTPUT_ROOT}")
++#INCLUDE_DIRECTORIES("${HYBRIDOS_ROOT_PATH}/include" "${HYBRIDOS_ROOT_PATH}/usr/include")
++#LINK_DIRECTORIES("${HYBRIDOS_ROOT_PATH}/lib" "${HYBRIDOS_ROOT_PATH}/usr/lib")
+ 
+ find_package(MbedTLS REQUIRED)
+ find_package(Securec REQUIRED)
