@@ -340,6 +340,7 @@ comment "MiniGUI"
 	source "package/hiwebkit/Config.in"
 	source "package/jerryscript/Config.in"
 	source "package/bounds_checking_function/Config.in"
+	source "package/hiacejs/Config.in"
 
 comment "Other GUIs"
 	source "package/qt5/Config.in"

@@ -1,0 +1,13 @@
+config BR2_PACKAGE_HIACEJS
+	bool "hiAceJS"
+	select BR2_PACKAGE_JPEG
+	select BR2_PACKAGE_LIBPNG
+	select BR2_PACKAGE_FREETYPE
+	select BR2_PACKAGE_JERRYSCRIPT
+	select BR2_PACKAGE_BOUNDS_CHECKING_FUNCTION
+	select BR2_PACKAGE_MBEDTLS
+	select BR2_PACKAGE_MINIGUI
+	help
+      The OpenHarmony ACE JS Derivative for HybridOS
+      https://hybridos.fmsoft.cn/
+
