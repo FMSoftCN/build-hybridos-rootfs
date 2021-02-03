@@ -338,6 +338,7 @@ comment "MiniGUI"
 	source "package/hibox/Config.in"
 	source "package/hibus/Config.in"
 	source "package/hiwebkit/Config.in"
+	source "package/jerryscript/Config.in"
 
 comment "Other GUIs"
 	source "package/qt5/Config.in"

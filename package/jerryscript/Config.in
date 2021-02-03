@@ -1,0 +1,5 @@
+config BR2_PACKAGE_JERRYSCRIPT
+	bool "JerryScript"
+	help
+      https://jerryscript.net/
+
