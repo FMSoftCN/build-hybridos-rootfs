@@ -1,0 +1,5 @@
+config BR2_PACKAGE_BOUNDS_CHECKING_FUNCTION
+	bool "bounds_checking_function"
+	help
+      C11 Annex K (Bounds-checking interfaces)
+
