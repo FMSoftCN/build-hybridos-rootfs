@@ -18,6 +18,7 @@ MINIGUI_CONF_OPTS = \
     --disable-splash \
     --disable-videopcxvfb \
     --with-ft2-includes=$(STAGING_DIR)/usr/include/freetype2 \
+    --with-hb-includes=$(STAGING_DIR)/usr/include/harfbuzz \
     --enable-virtualwindow
 
 $(eval $(autotools-package))
