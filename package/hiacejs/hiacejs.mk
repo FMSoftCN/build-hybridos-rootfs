@@ -3,7 +3,7 @@ HIACEJS_VERSION = b83d7b13f994627da4579b646b19974d69b5060f
 HIACEJS_SITE_METHOD = git
 HIACEJS_INSTALL_STAGING = YES
 
-HIACEJS_DEPENDENCIES = jpeg libpng freetype jerryscript bounds_checking_function mbedtls minigui
+HIACEJS_DEPENDENCIES = jpeg libpng freetype jerryscript bounds_checking_function mbedtls minigui hibus
 
 HIACEJS_CONF_OPTS = \
 	-DCMAKE_BUILD_TYPE=MinSizeRel \

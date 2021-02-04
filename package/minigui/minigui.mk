@@ -3,7 +3,7 @@ MINIGUI_VERSION = 9ff29ccb94a3d107842e5fe7247a291569cf1aa8
 MINIGUI_SITE_METHOD = git
 MINIGUI_INSTALL_STAGING = YES
 
-MINIGUI_DEPENDENCIES = jpeg libpng
+MINIGUI_DEPENDENCIES = jpeg libpng freetype harfbuzz
 
 define MINIGUI_RUN_AUTOGEN
     cd $(@D) && PATH=$(BR_PATH) ./autogen.sh

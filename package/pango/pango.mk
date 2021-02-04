@@ -20,6 +20,7 @@ PANGO_DEPENDENCIES = \
 	host-pkgconf \
 	libglib2 \
 	libfribidi \
+	minigui \
 	hicairo \
 	harfbuzz \
 	fontconfig \
@@ -40,6 +41,7 @@ endif
 ifeq ($(BR2_PACKAGE_XLIB_LIBXFT)$(BR2_PACKAGE_XLIB_LIBXRENDER),yy)
 PANGO_DEPENDENCIES += xlib_libXft xlib_libXrender
 endif
+
 
 $(eval $(meson-package))
 $(eval $(host-meson-package))

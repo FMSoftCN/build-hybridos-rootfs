@@ -13,7 +13,7 @@ HIWEBKIT_LICENSE_FILES = \
 	Source/WebCore/LICENSE-APPLE \
 	Source/WebCore/LICENSE-LGPL-2.1
 HIWEBKIT_DEPENDENCIES = host-ruby host-python host-gperf \
-	enchant harfbuzz icu jpeg libgcrypt libsecret libsoup \
+	enchant icu harfbuzz jpeg libgcrypt libsecret libsoup \
 	libtasn1 libxml2 libxslt openjpeg sqlite webp woff2 atk \
 	hibus minigui
 HIWEBKIT_CONF_OPTS = \
