@@ -31,6 +31,7 @@ HARFBUZZ_CONF_ENV = LDFLAGS="$(TARGET_LDFLAGS) -pthread"
 endif
 
 ifeq ($(BR2_PACKAGE_HICAIRO),y)
+HARFBUZZ_DEPENDENCIES += freetype libglib2 icu 
 HARFBUZZ_CONF_OPTS += \
 	--with-graphite2=no \
 	--with-cairo=no \
