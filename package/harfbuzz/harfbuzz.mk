@@ -30,6 +30,14 @@ ifeq ($(BR2_TOOLCHAIN_HAS_THREADS),y)
 HARFBUZZ_CONF_ENV = LDFLAGS="$(TARGET_LDFLAGS) -pthread"
 endif
 
+ifeq ($(BR2_PACKAGE_HICAIRO),y)
+HARFBUZZ_CONF_OPTS += \
+	--with-graphite2=no \
+	--with-cairo=no \
+	--with-icu=no \
+	--with-freetype=yes \
+	--with-glib=yes
+else
 ifeq ($(BR2_PACKAGE_CAIRO),y)
 HARFBUZZ_DEPENDENCIES += cairo
 HARFBUZZ_CONF_OPTS += --with-cairo=yes
@@ -63,6 +71,8 @@ HARFBUZZ_DEPENDENCIES += icu
 HARFBUZZ_CONF_OPTS += --with-icu=yes
 else
 HARFBUZZ_CONF_OPTS += --with-icu=no
+endif
+
 endif
 
 $(eval $(autotools-package))
