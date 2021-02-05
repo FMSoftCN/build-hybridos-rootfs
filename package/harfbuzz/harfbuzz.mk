@@ -34,7 +34,7 @@ ifeq ($(BR2_PACKAGE_HICAIRO),y)
 HARFBUZZ_CONF_OPTS += \
 	--with-graphite2=no \
 	--with-cairo=no \
-	--with-icu=no \
+	--with-icu=yes \
 	--with-freetype=yes \
 	--with-glib=yes
 else
