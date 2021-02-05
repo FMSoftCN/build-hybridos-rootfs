@@ -1,0 +1,7 @@
+config BR2_PACKAGE_HIVIEWRENDERER
+	bool "hiViewRenderer"
+	select BR2_PACKAGE_HIWEBKIT
+	help
+	  hiView Renderer
+	  https://hybridos.fmsoft.cn/
+

@@ -343,6 +343,7 @@ comment "MiniGUI"
 	source "package/hiacejs/Config.in"
 	source "package/hirsvg/Config.in"
 	source "package/hishell/Config.in"
+	source "package/hiviewrenderer/Config.in"
 
 comment "Other GUIs"
 	source "package/qt5/Config.in"
