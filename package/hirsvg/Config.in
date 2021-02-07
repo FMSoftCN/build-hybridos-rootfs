@@ -1,4 +1,4 @@
-config BR2_PACKAGE_LIBRSVG
+config BR2_PACKAGE_HIRSVG
 	bool "hiRsvg (librsvg derivative for hybridos)"
 	depends on BR2_USE_WCHAR # glib2
 	depends on BR2_TOOLCHAIN_HAS_THREADS # glib2

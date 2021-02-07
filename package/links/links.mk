@@ -39,7 +39,7 @@ LINKS_DEPENDENCIES += jpeg
 else
 LINKS_CONF_OPTS += --without-libjpeg
 endif
-ifeq ($(BR2_PACKAGE_LIBRSVG),y)
+ifeq ($(BR2_PACKAGE_HIRSVG),y)
 LINKS_CONF_OPTS += --with-librsvg
 LINKS_DEPENDENCIES += librsvg
 else
