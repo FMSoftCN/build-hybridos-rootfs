@@ -1,0 +1,7 @@
+config BR2_PACKAGE_INETD
+	bool "inetd"
+	select BR2_PACKAGE_HIBOX
+	select BR2_PACKAGE_HIBUS
+	help
+      The inetd runner
+
