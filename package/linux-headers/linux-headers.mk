@@ -58,7 +58,7 @@ LINUX_HEADERS_SOURCE = linux-$(LINUX_HEADERS_VERSION).tar.xz
 ifeq ($(findstring x2.6.,x$(LINUX_HEADERS_VERSION)),x2.6.)
 LINUX_HEADERS_SITE = $(BR2_KERNEL_MIRROR)/linux/kernel/v2.6
 else
-LINUX_HEADERS_SITE = $(BR2_KERNEL_MIRROR)/linux/kernel/v$(firstword $(subst ., ,$(LINUX_HEADERS_VERSION))).x
+LINUX_HEADERS_SITE = $(BR2_KERNEL_ALIYUN_MIRROR)/linux-kernel/v$(firstword $(subst ., ,$(LINUX_HEADERS_VERSION))).x
 endif # x2.6
 endif # LINUX_HEADERS_CUSTOM_TARBALL
 

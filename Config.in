@@ -251,6 +251,21 @@ config BR2_KERNEL_MIRROR
 	     http://www.XX.kernel.org/pub (XX = country code)
 	     http://mirror.aarnet.edu.au/pub/ftp.kernel.org
 
+config BR2_KERNEL_ALIYUN_MIRROR
+	string "Kernel.org mirror"
+	default "http://mirrors.aliyun.com/"
+	help
+	  kernel.org is mirrored on a number of servers around the
+	  world. The following allows you to select your preferred
+	  mirror. By default, a CDN is used, which automatically
+	  redirects to a mirror geographically close to you.
+
+	  Have a look on the kernel.org site for a list of mirrors, then
+	  enter the URL to the base directory. Examples:
+
+	     http://www.XX.kernel.org/pub (XX = country code)
+	     http://mirror.aarnet.edu.au/pub/ftp.kernel.org
+
 config BR2_GNU_MIRROR
 	string "GNU Software mirror"
 	default "http://ftpmirror.gnu.org"
