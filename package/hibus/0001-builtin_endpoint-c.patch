@@ -1,0 +1,14 @@
+diff --git a/src/builtin_endpoint.c b/src/builtin_endpoint.c
+index 2c93983..ffcffbd 100644
+--- a/src/builtin_endpoint.c
++++ b/src/builtin_endpoint.c
+@@ -890,7 +890,8 @@ bool fire_system_event (BusServer* bus_srv, int bubble_type,
+         }
+         else {
+             WSClient* wsc = (WSClient *)cause->entity.client;
+-            strncpy (peer_info, wsc->remote_ip, sizeof (wsc->remote_ip));
++            size_t n = sizeof (wsc->remote_ip);
++            strncpy (peer_info, wsc->remote_ip, n);
+         }
+ 
+         n = snprintf (bubble_data, sizeof (bubble_data), 
