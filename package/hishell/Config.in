@@ -2,6 +2,7 @@ config BR2_PACKAGE_HISHELL
 	bool "hiShell"
 	select BR2_PACKAGE_HIACEJS
 	select BR2_PACKAGE_HIWEBKIT
+	select BR2_PACKAGE_LIBRSVG
 	help
       Hybridos shell
       https://hybridos.fmsoft.cn/
