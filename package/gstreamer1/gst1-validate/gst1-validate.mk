@@ -14,7 +14,7 @@ GST1_VALIDATE_DEPENDENCIES = \
 	gstreamer1 \
 	gst1-plugins-base \
 	json-glib \
-	$(if $(BR2_PACKAGE_CAIRO),cairo)
+	$(if $(BR2_PACKAGE_HICAIRO),cairo)
 
 ifeq ($(BR2_PACKAGE_PYTHON3),y)
 GST1_VALIDATE_DEPENDENCIES += host-python3 python3

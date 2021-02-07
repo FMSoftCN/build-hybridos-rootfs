@@ -1,15 +1,51 @@
 config BR2_PACKAGE_HICAIRO
-	bool "hiCairo"
+	bool "hiCairo (The Cairo Derivative for HybridOS)"
 	select BR2_PACKAGE_PIXMAN
 	select BR2_PACKAGE_FONTCONFIG
 	select BR2_PACKAGE_MINIGUI
 	help
 	  The Cairo Derivative for HybridOS.
+
+	  https://github.com/FMSoftCN/hicairo
+
 	  Cairo is a 2D graphics library with support for multiple
 	  output devices. Currently supported output targets include
 	  the X Window System, Win32, image buffers, and PostScript,
 	  PDF, and SVG file output. Experimental backends include
 	  OpenGL (through glitz), Quartz, and XCB.
-	
-	  https://github.com/FMSoftCN/hicairo
 
+	  http://cairographics.org/
+
+if BR2_PACKAGE_HICAIRO
+
+config BR2_PACKAGE_HICAIRO_PS
+	bool "postscript support"
+	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_HICAIRO_PDF
+
+config BR2_PACKAGE_HICAIRO_PDF
+	bool "pdf support"
+	select BR2_PACKAGE_ZLIB
+
+config BR2_PACKAGE_HICAIRO_PNG
+	bool "png support"
+	select BR2_PACKAGE_LIBPNG
+	select BR2_PACKAGE_ZLIB
+
+config BR2_PACKAGE_HICAIRO_SCRIPT
+	bool "script support"
+	select BR2_PACKAGE_HICAIRO_PNG
+
+config BR2_PACKAGE_HICAIRO_SVG
+	bool "svg support"
+	select BR2_PACKAGE_HICAIRO_PNG
+	select BR2_PACKAGE_HICAIRO_PDF
+
+config BR2_PACKAGE_HICAIRO_TEE
+	bool "tee support"
+
+config BR2_PACKAGE_HICAIRO_XML
+	bool "xml support"
+	select BR2_PACKAGE_HICAIRO_PNG
+
+endif

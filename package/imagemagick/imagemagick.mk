@@ -87,7 +87,7 @@ else
 IMAGEMAGICK_CONF_OPTS += --without-png
 endif
 
-ifeq ($(BR2_PACKAGE_LIBRSVG),y)
+ifeq ($(BR2_PACKAGE_HIRSVG),y)
 IMAGEMAGICK_CONF_OPTS += --with-rsvg
 IMAGEMAGICK_DEPENDENCIES += librsvg
 else

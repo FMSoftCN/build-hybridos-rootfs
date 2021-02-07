@@ -24,7 +24,7 @@ NETSURF_FRONTEND = gtk3
 endif
 
 ifeq ($(BR2_PACKAGE_NETSURF_GTK)$(BR2_PACKAGE_NETSURF_GTK3),y)
-ifeq ($(BR2_PACKAGE_LIBRSVG),y)
+ifeq ($(BR2_PACKAGE_HIRSVG),y)
 NETSURF_DEPENDENCIES += librsvg
 define NETSURF_SVG_CONFIGURE_CMDS
 	echo "override NETSURF_USE_RSVG := YES"         >> $(@D)/netsurf/Makefile.config

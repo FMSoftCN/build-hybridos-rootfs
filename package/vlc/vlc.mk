@@ -331,7 +331,7 @@ else
 VLC_CONF_OPTS += --disable-png
 endif
 
-ifeq ($(BR2_PACKAGE_LIBRSVG),y)
+ifeq ($(BR2_PACKAGE_HIRSVG),y)
 VLC_CONF_OPTS += --enable-svg --enable-svgdec
 VLC_DEPENDENCIES += librsvg
 else

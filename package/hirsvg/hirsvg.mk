@@ -16,6 +16,11 @@ define MINIGUI_RUN_AUTOGEN
 endef
 HIRSVG_PRE_CONFIGURE_HOOKS += MINIGUI_RUN_AUTOGEN
 
-HIRSVG_CONF_OPTS = --disable-introspection --disable-pixbuf-loader --enable-minigui-backend
+HIRSVG_CONF_ENV = LIBS=$(TARGET_NLS_LIBS)
+HIRSVG_CONF_OPTS = --disable-pixbuf-loader --disable-tools --disable-introspection --enable-minigui-backend
+
+HOST_HIRSVG_CONF_OPTS = --disable-introspection --enable-minigui-backend=no
+HOST_HIRSVG_DEPENDENCIES = host-cairo host-gdk-pixbuf host-libcroco host-libglib2 host-libxml2 host-pango
 
 $(eval $(autotools-package))
+$(eval $(host-autotools-package))
