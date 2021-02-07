@@ -344,6 +344,7 @@ comment "MiniGUI"
 	source "package/hirsvg/Config.in"
 	source "package/hishell/Config.in"
 	source "package/hiviewrenderer/Config.in"
+	source "package/inetd/Config.in"
 
 comment "Other GUIs"
 	source "package/qt5/Config.in"
