@@ -22,7 +22,7 @@ FLTK_CONFIG_SCRIPTS = fltk-config
 FLTK_LICENSE = LGPL-2.0 with exceptions
 FLTK_LICENSE_FILES = COPYING
 
-ifeq ($(BR2_PACKAGE_CAIRO),y)
+ifeq ($(BR2_PACKAGE_HICAIRO),y)
 FLTK_CONF_OPTS += --enable-cairo
 FLTK_DEPENDENCIES += cairo
 endif

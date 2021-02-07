@@ -5,7 +5,7 @@ config BR2_PACKAGE_CAIROMM
 	depends on BR2_USE_WCHAR # libglib2
 	depends on BR2_USE_MMU # libglib2
 	depends on BR2_INSTALL_LIBSTDCPP
-	select BR2_PACKAGE_CAIRO
+	select BR2_PACKAGE_HICAIRO
 	select BR2_PACKAGE_LIBGLIB2
 	select BR2_PACKAGE_LIBSIGC
 	help

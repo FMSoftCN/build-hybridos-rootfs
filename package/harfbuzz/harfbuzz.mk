@@ -39,7 +39,7 @@ HARFBUZZ_CONF_OPTS += \
 	--with-freetype=yes \
 	--with-glib=yes
 else
-ifeq ($(BR2_PACKAGE_CAIRO),y)
+ifeq ($(BR2_PACKAGE_HICAIRO),y)
 HARFBUZZ_DEPENDENCIES += cairo
 HARFBUZZ_CONF_OPTS += --with-cairo=yes
 else

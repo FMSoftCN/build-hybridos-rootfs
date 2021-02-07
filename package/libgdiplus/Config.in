@@ -6,7 +6,7 @@ config BR2_PACKAGE_LIBGDIPLUS
 	depends on BR2_USE_MMU # libglib2
 	select BR2_PACKAGE_XLIB_LIBXFT
 	select BR2_PACKAGE_LIBGLIB2
-	select BR2_PACKAGE_CAIRO
+	select BR2_PACKAGE_HICAIRO
 	select BR2_PACKAGE_LIBPNG
 	help
 	  An Open Source implementation of the GDI+ API.
