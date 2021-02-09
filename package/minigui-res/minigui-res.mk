@@ -11,10 +11,12 @@ endef
 MINIGUI_RES_PRE_CONFIGURE_HOOKS += MINIGUI_RES_RUN_AUTOGEN
 
 define MINIGUI_RES_INSTALL_FONT
-    $(INSTALL) -d $(TARGET_DIR)/usr/share/minigui/res/font
+	$(INSTALL) -d $(TARGET_DIR)/usr/share/fonts
+	$(INSTALL) -d $(TARGET_DIR)/usr/share/mime
     $(INSTALL) -c -m 644 $(MINIGUI_RES_PKGDIR)/SourceHanSansCN-Regular.otf \
-        $(TARGET_DIR)/usr/share/minigui/res/font
-	cd $(TARGET_DIR)/usr/share/minigui/res/font && ln -sf SourceHanSansCN-Regular.otf SourceHanSansSC-Regular.otf
+        $(TARGET_DIR)/usr/share/fonts
+    $(INSTALL) -c -m 644 $(MINIGUI_RES_PKGDIR)/mime.cache \
+        $(TARGET_DIR)/usr/share/mime
 endef
 MINIGUI_RES_POST_INSTALL_TARGET_HOOKS += MINIGUI_RES_INSTALL_FONT
 
