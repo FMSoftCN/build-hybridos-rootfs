@@ -14,6 +14,7 @@ define MINIGUI_RES_INSTALL_FONT
     $(INSTALL) -d $(TARGET_DIR)/usr/share/minigui/res/font
     $(INSTALL) -c -m 644 $(MINIGUI_RES_PKGDIR)/SourceHanSansCN-Regular.otf \
         $(TARGET_DIR)/usr/share/minigui/res/font
+	cd $(TARGET_DIR)/usr/share/minigui/res/font && ln -sf SourceHanSansCN-Regular.otf SourceHanSansSC-Regular.otf
 endef
 MINIGUI_RES_POST_INSTALL_TARGET_HOOKS += MINIGUI_RES_INSTALL_FONT
 
