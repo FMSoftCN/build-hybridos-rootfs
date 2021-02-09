@@ -12,10 +12,10 @@ GLIB_NETWORKING_INSTALL_STAGING = YES
 GLIB_NETWORKING_DEPENDENCIES = \
 	$(TARGET_NLS_DEPENDENCIES) \
 	host-pkgconf \
-	libglib2
+	libglib2 \
+	libproxy
 
 GLIB_NETWORKING_CONF_OPTS = \
-	-Dlibproxy=disabled \
 	-Dgnome_proxy=disabled
 
 GLIB_NETWORKING_LICENSE = LGPL-2.0+
