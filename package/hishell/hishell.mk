@@ -5,4 +5,10 @@ HISHELL_INSTALL_STAGING = YES
 
 HISHELL_DEPENDENCIES = mgeff hiwebkit hiacejs
 
+
+define HISHELL_INSTALL_FONT
+	cd $(TARGET_DIR)/usr/libexec/samples/app/fonts/ && ln -sf /usr/share/minigui/res/font/SourceHanSansSC-Regular.otf SourceHanSansSC-Regular.otf
+endef
+HISHELL_POST_INSTALL_TARGET_HOOKS += HISHELL_INSTALL_FONT
+
 $(eval $(cmake-package))
