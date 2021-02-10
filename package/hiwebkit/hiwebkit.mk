@@ -51,4 +51,11 @@ HIWEBKIT_CONF_OPTS = \
 	-DUSE_LIBHYPHEN=OFF \
 	-DUSE_SYSTEMD=OFF
 
+define HIWEBKIT_INSTALL_JS_HYBRIDOS
+	$(INSTALL) -d $(TARGET_DIR)/opt/view-renderers/views.fmsoft.cn
+	$(INSTALL) -D -m 0644 $(@D)/lib/libjshybridos.so \
+        $(TARGET_DIR)/opt/view-renderers/views.fmsoft.cn
+endef
+HIWEBKIT_POST_INSTALL_TARGET_HOOKS += HIWEBKIT_INSTALL_JS_HYBRIDOS
+
 $(eval $(cmake-package))
