@@ -1,0 +1,7 @@
+config BR2_PACKAGE_HIDRMDRIVERS
+	bool "hiDRMDrivers"
+	select BR2_PACKAGE_MINIGUI
+	select BR2_PACKAGE_LIBDRM
+	help
+      The DRM Drivers for MiniGUI/HybridOS
+

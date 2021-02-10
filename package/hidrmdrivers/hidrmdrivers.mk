@@ -1,0 +1,13 @@
+HIDRMDRIVERS_SITE = https://gitlab.fmsoft.cn/hybridos/hidrmdrivers
+HIDRMDRIVERS_VERSION = 1613362459c69fedb4877f34ec3aa1da2c8bfcdc
+HIDRMDRIVERS_SITE_METHOD = git
+HIDRMDRIVERS_INSTALL_STAGING = YES
+
+HIDRMDRIVERS_DEPENDENCIES = minigui libdrm
+
+define HIDRMDRIVERS_RUN_AUTOGEN
+    cd $(@D) && PATH=$(BR_PATH) ./autogen.sh
+endef
+HIDRMDRIVERS_PRE_CONFIGURE_HOOKS += HIDRMDRIVERS_RUN_AUTOGEN
+
+$(eval $(autotools-package))
