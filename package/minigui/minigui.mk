@@ -3,7 +3,7 @@ MINIGUI_VERSION = 9ff29ccb94a3d107842e5fe7247a291569cf1aa8
 MINIGUI_SITE_METHOD = git
 MINIGUI_INSTALL_STAGING = YES
 
-MINIGUI_DEPENDENCIES = jpeg libpng freetype harfbuzz
+MINIGUI_DEPENDENCIES = jpeg libpng freetype harfbuzz libdrm
 
 define MINIGUI_RUN_AUTOGEN
     cd $(@D) && PATH=$(BR_PATH) ./autogen.sh
@@ -15,6 +15,7 @@ MINIGUI_CONF_OPTS = \
     --enable-compositing \
     --with-ttfsupport=ft2 \
     --enable-develmode \
+    --enable-videodrm \
     --disable-splash \
     --disable-videopcxvfb \
     --with-ft2-includes=$(STAGING_DIR)/usr/include/freetype2 \

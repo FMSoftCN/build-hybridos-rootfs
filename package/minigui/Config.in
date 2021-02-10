@@ -4,6 +4,7 @@ config BR2_PACKAGE_MINIGUI
 	select BR2_PACKAGE_LIBPNG
 	select BR2_PACKAGE_FREETYPE
     select BR2_PACKAGE_HARFBUZZ
+    select BR2_PACKAGE_LIBDRM
 	help
           http://www.minigui.org
 
