@@ -23,3 +23,22 @@ disable_overscan=1
 gpu_mem_256=100
 gpu_mem_512=100
 gpu_mem_1024=100
+
+# fixes rpi (3B, 3B+, 3A+, 4B and Zero W) ttyAMA0 serial console
+dtoverlay=miniuart-bt
+
+# enable 64bits support
+arm_64bit=1
+
+dtoverlay=vc4-fkms-v3d
+max_framebuffers=2
+
+#max_usb_current=1
+#hdmi_force_hotplug=1
+#config_hidmi_boost=7
+#hdmi_group=2
+#hdmi_mode=1
+#hdmi_mode=87
+#hdmi_drive=1
+#display_rotate=0
+#hdmi_cvt 1024 600 60 6 0 0 0
