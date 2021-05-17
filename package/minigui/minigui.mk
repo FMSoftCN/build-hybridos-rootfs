@@ -1,9 +1,9 @@
 MINIGUI_SITE = https://gitlab.fmsoft.cn/VincentWei/minigui
-MINIGUI_VERSION = 9ff29ccb94a3d107842e5fe7247a291569cf1aa8
+MINIGUI_VERSION = a965f1023c510e1810ed12309628252a9cb03a1c
 MINIGUI_SITE_METHOD = git
 MINIGUI_INSTALL_STAGING = YES
 
-MINIGUI_DEPENDENCIES = jpeg libpng freetype harfbuzz libdrm
+MINIGUI_DEPENDENCIES = jpeg libpng freetype harfbuzz libdrm pixman
 
 define MINIGUI_RUN_AUTOGEN
     cd $(@D) && PATH=$(BR_PATH) ./autogen.sh

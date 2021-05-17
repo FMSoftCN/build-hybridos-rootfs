@@ -1,13 +1,16 @@
 MGEFF_SITE = https://gitlab.fmsoft.cn/VincentWei/mgeff
-MGEFF_VERSION = d995f3b5001c7dd7127175356c78d005186d4350
+MGEFF_VERSION = cb15244c06a8b3eaf8dba272429784052ea3b524
 MGEFF_SITE_METHOD = git
 MGEFF_INSTALL_STAGING = YES
 
-MGEFF_DEPENDENCIES = minigui mgplus
+MGEFF_DEPENDENCIES = minigui
 
 define MGEFF_RUN_AUTOGEN
     cd $(@D) && PATH=$(BR_PATH) ./autogen.sh
 endef
 MGEFF_PRE_CONFIGURE_HOOKS += MGEFF_RUN_AUTOGEN
+
+MGEFF_CONF_OPTS = \
+    --disable-effectors
 
 $(eval $(autotools-package))

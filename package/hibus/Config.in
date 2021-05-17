@@ -3,7 +3,7 @@ config BR2_PACKAGE_HIBUS
 	select BR2_PACKAGE_HIBOX
 	select BR2_PACKAGE_OPENSSL
 	select BR2_PACKAGE_OPENSSL_FORCE_LIBOPENSSL
-    select BR2_PACKAGE_LIBGLIB2
+	select BR2_PACKAGE_LIBGLIB2
 	help
 	  The data bus (the daemon, the command line, and the library 
 	  for clients) for the device side of HybridOS.

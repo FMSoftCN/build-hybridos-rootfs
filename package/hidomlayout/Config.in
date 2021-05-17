@@ -1,0 +1,8 @@
+config BR2_PACKAGE_HIDOMLAYOUT
+	bool "hiDomLayout"
+	select BR2_PACKAGE_LIBGLIB2
+	help
+	  hiDOMLayout is a library to maintain a DOM tree, 
+	  lay out and stylize the DOM nodes by using CSS (Cascaded Style Sheets).
+	  https://gitlab.fmsoft.cn/hybridos/hidomlayout
+
