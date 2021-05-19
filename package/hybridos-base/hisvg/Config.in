@@ -15,3 +15,9 @@ config BR2_PACKAGE_HISVG
 
 	  https://gitlab.fmsoft.cn/hybridos/hisvg
 
+comment "hisvg needs a toolchain w/ wchar, threads, C++, gcc >= 4.8"
+	depends on BR2_USE_MMU
+	depends on BR2_TOOLCHAIN_HAS_SYNC_4
+	depends on !BR2_USE_WCHAR || !BR2_TOOLCHAIN_HAS_THREADS || \
+		!BR2_TOOLCHAIN_GCC_AT_LEAST_4_8 || \
+		!BR2_INSTALL_LIBSTDCPP
