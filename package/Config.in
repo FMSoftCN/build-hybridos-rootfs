@@ -282,7 +282,6 @@ menu "HybridOS"
 comment "MiniGUI"
 	source "package/hishell/Config.in"
 	source "package/inetd/Config.in"
-	source "package/hidrmdrivers/Config.in"
 
 endmenu
 
