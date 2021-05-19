@@ -1,5 +1,6 @@
 config BR2_PACKAGE_HICAIRO
 	bool "hiCairo (752 KB)"
+    default y
 	select BR2_PACKAGE_PIXMAN
 	select BR2_PACKAGE_FONTCONFIG
 	select BR2_PACKAGE_MINIGUI
@@ -38,6 +39,7 @@ config BR2_PACKAGE_HICAIRO_SCRIPT
 
 config BR2_PACKAGE_HICAIRO_SVG
 	bool "svg support"
+    default y
 	select BR2_PACKAGE_HICAIRO_PNG
 	select BR2_PACKAGE_HICAIRO_PDF
 

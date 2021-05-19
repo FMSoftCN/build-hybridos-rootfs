@@ -1,5 +1,6 @@
 config BR2_PACKAGE_HIBOX
 	bool "hiBox (132 KB)"
+    default y
 	help
 	  The libubox derivative for HybridOS
 	  https://hybridos.fmsoft.cn/

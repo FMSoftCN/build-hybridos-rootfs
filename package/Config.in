@@ -273,6 +273,27 @@ menu "Games"
 	source "package/supertuxkart/Config.in"
 endmenu
 
+menu "HybridOS"
+    source "package/hybridos-base/Config.in"
+
+menu "HybridOS Runtime"
+comment "MiniGUI"
+	source "package/libproxy/Config.in"
+	source "package/hiwebkit/Config.in"
+	source "package/jerryscript/Config.in"
+	source "package/bounds_checking_function/Config.in"
+	source "package/hiacejs/Config.in"
+	source "package/hirsvg/Config.in"
+	source "package/hishell/Config.in"
+	source "package/hiviewrenderer/Config.in"
+	source "package/inetd/Config.in"
+	source "package/hidrmdrivers/Config.in"
+	source "package/hybridos-lite/Config.in"
+endmenu
+
+
+endmenu
+
 menu "Graphic libraries and applications (graphic/text)"
 
 comment "Graphic applications"
@@ -327,29 +348,6 @@ comment "Graphic libraries"
 	source "package/sdl2_net/Config.in"
 	source "package/sdl2_ttf/Config.in"
 	source "package/tk/Config.in"
-
-comment "MiniGUI"
-	source "package/minigui/Config.in"
-	source "package/minigui-res/Config.in"
-	source "package/mgutils/Config.in"
-	source "package/mgplus/Config.in"
-	source "package/mgeff/Config.in"
-	source "package/hicairo/Config.in"
-	source "package/hibox/Config.in"
-	source "package/hibus/Config.in"
-	source "package/hidomlayout/Config.in"
-	source "package/hisvg/Config.in"
-	source "package/libproxy/Config.in"
-	source "package/hiwebkit/Config.in"
-	source "package/jerryscript/Config.in"
-	source "package/bounds_checking_function/Config.in"
-	source "package/hiacejs/Config.in"
-	source "package/hirsvg/Config.in"
-	source "package/hishell/Config.in"
-	source "package/hiviewrenderer/Config.in"
-	source "package/inetd/Config.in"
-	source "package/hidrmdrivers/Config.in"
-	source "package/hybridos-lite/Config.in"
 
 comment "Other GUIs"
 	source "package/qt5/Config.in"
