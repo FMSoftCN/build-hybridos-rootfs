@@ -279,9 +279,9 @@ menu "HybridOS"
     source "package/hybridos-hijs-runtime/Config.in"
 	source "package/hybridos-lite/Config.in"
 
-comment "MiniGUI"
-	source "package/hishell/Config.in"
+comment "Applications"
 	source "package/inetd/Config.in"
+	source "package/hishell/Config.in"
 
 endmenu
 
