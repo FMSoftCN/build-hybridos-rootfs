@@ -1,0 +1,11 @@
+config BR2_PACKAGE_HYBRIDOS_HIWEB_RUNTIME
+	bool "HyBridOS hiWeb Runtime"
+    select BR2_PACKAGE_HYBRIDOS_BASE
+	help
+	  HyBridOS hiWeb Runtime (hiWebKit)
+
+if BR2_PACKAGE_HYBRIDOS_HIWEB_RUNTIME
+source "package/hybridos-hiweb-runtime/libproxy/Config.in"
+source "package/hybridos-hiweb-runtime/hiwebkit/Config.in"
+endif
+

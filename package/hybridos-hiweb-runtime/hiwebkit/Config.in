@@ -21,6 +21,7 @@ comment "hiWebKit needs a glibc toolchain w/ C++, gcc >= 7"
 
 config BR2_PACKAGE_HIWEBKIT
 	bool "hiWebKit (69 MB)"
+    default y
 	depends on BR2_INSTALL_LIBSTDCPP
 	depends on BR2_TOOLCHAIN_GCC_AT_LEAST_7
 	depends on BR2_TOOLCHAIN_USES_GLIBC

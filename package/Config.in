@@ -275,11 +275,10 @@ endmenu
 
 menu "HybridOS"
     source "package/hybridos-base/Config.in"
+    source "package/hybridos-hiweb-runtime/Config.in"
 
 menu "HybridOS Runtime"
 comment "MiniGUI"
-	source "package/libproxy/Config.in"
-	source "package/hiwebkit/Config.in"
 	source "package/jerryscript/Config.in"
 	source "package/bounds_checking_function/Config.in"
 	source "package/hiacejs/Config.in"
