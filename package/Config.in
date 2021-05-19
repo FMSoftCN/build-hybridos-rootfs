@@ -280,9 +280,7 @@ menu "HybridOS"
 	source "package/hybridos-lite/Config.in"
 
 comment "MiniGUI"
-	source "package/hirsvg/Config.in"
 	source "package/hishell/Config.in"
-	source "package/hiviewrenderer/Config.in"
 	source "package/inetd/Config.in"
 	source "package/hidrmdrivers/Config.in"
 
