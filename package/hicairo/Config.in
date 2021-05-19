@@ -1,5 +1,5 @@
 config BR2_PACKAGE_HICAIRO
-	bool "hiCairo (The Cairo Derivative for HybridOS)"
+	bool "hiCairo (752 KB)"
 	select BR2_PACKAGE_PIXMAN
 	select BR2_PACKAGE_FONTCONFIG
 	select BR2_PACKAGE_MINIGUI

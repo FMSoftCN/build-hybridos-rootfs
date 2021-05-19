@@ -1,5 +1,5 @@
 config BR2_PACKAGE_MINIGUI
-	bool "Minigui"
+	bool "MiniGUI (2.9 MB)"
 	select BR2_PACKAGE_JPEG
 	select BR2_PACKAGE_LIBPNG
 	select BR2_PACKAGE_FREETYPE

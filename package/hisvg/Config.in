@@ -1,5 +1,5 @@
 config BR2_PACKAGE_HISVG
-	bool "hisvg"
+	bool "hiSVG (188 KB)"
 	depends on BR2_USE_WCHAR # glib2
 	depends on BR2_TOOLCHAIN_HAS_THREADS # glib2
 	depends on BR2_USE_MMU # glib2

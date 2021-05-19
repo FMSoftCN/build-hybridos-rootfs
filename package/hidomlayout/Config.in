@@ -1,5 +1,5 @@
 config BR2_PACKAGE_HIDOMLAYOUT
-	bool "hiDomLayout"
+	bool "hiDomLayout (576 KB)"
 	select BR2_PACKAGE_LIBGLIB2
 	help
 	  hiDOMLayout is a library to maintain a DOM tree, 

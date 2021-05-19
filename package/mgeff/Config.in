@@ -1,5 +1,5 @@
 config BR2_PACKAGE_MGEFF
-	bool "mGEff"
+	bool "mGEff (40 KB)"
 	select BR2_PACKAGE_MINIGUI
 	help
           http://www.minigui.org

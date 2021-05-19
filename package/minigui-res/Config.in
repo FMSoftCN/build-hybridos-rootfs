@@ -1,5 +1,5 @@
 config BR2_PACKAGE_MINIGUI_RES
-	bool "MiniGUI resource"
+	bool "MiniGUI Resource (8.7 MB)"
 	select BR2_PACKAGE_MINIGUI
 	help
           http://www.minigui.org

@@ -1,5 +1,5 @@
 config BR2_PACKAGE_MGUTILS
-	bool "mGUtils"
+	bool "mGUtils (104 KB)"
 	select BR2_PACKAGE_MINIGUI
 	help
           http://www.minigui.org
