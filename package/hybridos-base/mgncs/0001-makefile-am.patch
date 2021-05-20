@@ -1,0 +1,16 @@
+diff --git a/etc/Makefile.am b/etc/Makefile.am
+index 40d0306..5c963ab 100644
+--- a/etc/Makefile.am
++++ b/etc/Makefile.am
+@@ -4,7 +4,10 @@
+ install-data-local:
+ 	if [ ! -d $(prefix)/etc ]; then $(INSTALL) -d $(prefix)/etc; fi
+ 
+-	$(INSTALL_DATA) mgncs.cfg $(prefix)/etc/mgncs.cfg
++#	$(INSTALL_DATA) mgncs.cfg $(prefix)/etc/mgncs.cfg
++
++mgncscfgdir = $(prefix)/etc
++mgncscfg_DATA = $(abs_top_srcdir)/etc/mgncs.cfg
+ 
+ EXTRA_DIST = mgncs.cfg
+ 
