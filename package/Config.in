@@ -274,14 +274,22 @@ menu "Games"
 endmenu
 
 menu "HybridOS"
-    source "package/hybridos-base/Config.in"
-    source "package/hybridos-hiweb-runtime/Config.in"
-    source "package/hybridos-hijs-runtime/Config.in"
+
 	source "package/hybridos-lite/Config.in"
 
-comment "Applications"
+menu "HybridOS Base Libraries"
+    source "package/hybridos-base/Config.in"
+endmenu
+
+menu "HybridOS Runtime"
+    source "package/hybridos-hiwebkit-runtime/Config.in"
+    source "package/hybridos-hiacejs-runtime/Config.in"
+endmenu
+
+menu "Applications"
 	source "package/inetd/Config.in"
 	source "package/hishell/Config.in"
+endmenu
 
 endmenu
 

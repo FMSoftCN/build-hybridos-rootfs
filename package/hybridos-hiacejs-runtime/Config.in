@@ -1,0 +1,12 @@
+config BR2_PACKAGE_HYBRIDOS_HIACEJS_RUNTIME
+	bool "HyBridOS hiACEJS Runtime"
+    select BR2_PACKAGE_HYBRIDOS_BASE
+	help
+	  HyBridOS hiACEJS Runtime (hiAceJSKit)
+
+if BR2_PACKAGE_HYBRIDOS_HIACEJS_RUNTIME
+source "package/hybridos-hiacejs-runtime/jerryscript/Config.in"
+source "package/hybridos-hiacejs-runtime/bounds_checking_function/Config.in"
+source "package/hybridos-hiacejs-runtime/hiacejs/Config.in"
+endif
+
