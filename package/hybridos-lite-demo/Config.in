@@ -1,5 +1,5 @@
-config BR2_PACKAGE_HYBRIDOS_LITE
-	bool "HybridOS lite"
+config BR2_PACKAGE_HYBRIDOS_LITE_DEMO
+	bool "HybridOS lite demo"
     select BR2_PACKAGE_HYBRIDOS_BASE
 	select BR2_PACKAGE_LIBGLIB2
 	select BR2_PACKAGE_MINIGUI

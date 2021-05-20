@@ -275,8 +275,6 @@ endmenu
 
 menu "HybridOS"
 
-	source "package/hybridos-lite/Config.in"
-
 menu "HybridOS Base Libraries"
     source "package/hybridos-base/Config.in"
 endmenu
@@ -289,6 +287,7 @@ endmenu
 menu "Applications"
 	source "package/inetd/Config.in"
 	source "package/hishell/Config.in"
+	source "package/hybridos-lite-demo/Config.in"
 endmenu
 
 endmenu
