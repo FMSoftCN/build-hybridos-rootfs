@@ -275,6 +275,9 @@ endmenu
 
 menu "HybridOS"
 
+    source "package/hybridos/Config.in"
+    source "package/hybridos-lite/Config.in"
+
 menu "HybridOS Base Libraries"
     source "package/hybridos-base/Config.in"
 endmenu
