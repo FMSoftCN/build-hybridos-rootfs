@@ -7,7 +7,7 @@ HISHELL_DEPENDENCIES = mgeff hiwebkit hiacejs
 
 
 define HISHELL_INSTALL_FONT
-	cd $(TARGET_DIR)/usr/libexec/samples/app/fonts/ && ln -sf /usr/share/fonts/SourceHanSansCN-Regular.otf SourceHanSansSC-Regular.otf
+	cd $(TARGET_DIR)/usr/libexec/samples/app/fonts/ && ln -sf /usr/share/fonts/sans-serif-hei-chinese-medium.ttf SourceHanSansSC-Regular.otf
 endef
 HISHELL_POST_INSTALL_TARGET_HOOKS += HISHELL_INSTALL_FONT
 

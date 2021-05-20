@@ -1,8 +1,8 @@
 diff --git a/configure.ac b/configure.ac
-index 600422e..3b48b1a 100644
+index f5c9bea..25d6fda 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -8,235 +8,10 @@ dnl ========================================================================
+@@ -8,243 +8,10 @@ dnl ========================================================================
  dnl Checks for programs.
  AC_PROG_MAKE_SET
  
@@ -13,6 +13,12 @@ index 600422e..3b48b1a 100644
 -else
 -  AC_ARG_WITH(mgedition, [  --with-mgedition=ve/se/pe/ee])
 -fi
+-
+-IEKIE_FONTS=" \
+-sans-serif-hei-chinese-medium.ttf	\
+-sans-serif-hei-latin-light.ttf \
+-sans-serif-hei-latin-medium.ttf \
+-"
 -
 -ADOBE_FONTS=" \
 -AdobeVFPrototype.ttf \
@@ -226,6 +232,7 @@ index 600422e..3b48b1a 100644
 -    ;;
 -esac
 -
+-AC_SUBST(IEKIE_FONTS)
 -AC_SUBST(ADOBE_FONTS)
 -AC_SUBST(DEV_FONTS)
 -
@@ -235,6 +242,7 @@ index 600422e..3b48b1a 100644
  cursor/Makefile
  icon/Makefile
 -font/Makefile
+-iekie-fonts/Makefile
 -adobe-fonts/Makefile
  )
  
