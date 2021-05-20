@@ -1,6 +1,5 @@
-config BR2_PACKAGE_MGUTILS
-	bool "mGUtils (104 KB)"
-    default y
+config BR2_PACKAGE_MGPLUS
+	bool "mGPlus"
 	select BR2_PACKAGE_MINIGUI
 	help
           http://www.minigui.org
