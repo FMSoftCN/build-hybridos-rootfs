@@ -10,7 +10,4 @@ define MGEFF_RUN_AUTOGEN
 endef
 MGEFF_PRE_CONFIGURE_HOOKS += MGEFF_RUN_AUTOGEN
 
-MGEFF_CONF_OPTS = \
-    --disable-effectors
-
 $(eval $(autotools-package))

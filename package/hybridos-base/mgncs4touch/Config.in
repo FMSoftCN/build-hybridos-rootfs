@@ -1,0 +1,12 @@
+config BR2_PACKAGE_MGNCS4TOUCH
+	bool "mGNCS (104 KB)"
+	select BR2_PACKAGE_MINIGUI
+	select BR2_PACKAGE_MGPLUS
+	select BR2_PACKAGE_LIBXML2
+	select BR2_PACKAGE_SQLITE
+	select BR2_PACKAGE_MGEFF
+	select BR2_PACKAGE_MGNCS
+	select BR2_PACKAGE_CHIPMUNK
+	help
+          http://www.minigui.org
+

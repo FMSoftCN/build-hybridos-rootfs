@@ -4,13 +4,11 @@
 #
 ################################################################################
 
-CHIPMUNK_VERSION = 7.0.3
-CHIPMUNK_SITE = https://github.com/slembcke/Chipmunk2D/archive
-CHIPMUNK_SOURCE = Chipmunk-$(CHIPMUNK_VERSION).tar.gz
+CHIPMUNK_SITE = https://gitlab.fmsoft.cn/VincentWei/chipmunk
+CHIPMUNK_VERSION = 610ea6e9109c97069f9f4ec5073c94daa843fea4
+CHIPMUNK_SITE_METHOD = git
 CHIPMUNK_INSTALL_STAGING = YES
-CHIPMUNK_LICENSE = MIT
-CHIPMUNK_LICENSE_FILES = LICENSE.txt
-CHIPMUNK_DEPENDENCIES = libgl
+
 CHIPMUNK_CONF_OPTS = -DBUILD_DEMOS=OFF
 
 ifeq ($(BR2_STATIC_LIBS)$(BR2_SHARED_STATIC_LIBS),y)
