@@ -6,7 +6,6 @@ config BR2_PACKAGE_HYBRIDOS_BASE
 if BR2_PACKAGE_HYBRIDOS_BASE
 source "package/hybridos-base/minigui/Config.in"
 source "package/hybridos-base/minigui-res/Config.in"
-source "package/hybridos-base/mgutils/Config.in"
 source "package/hybridos-base/mgplus/Config.in"
 source "package/hybridos-base/mgeff/Config.in"
 source "package/hybridos-base/hidrmdrivers/Config.in"
