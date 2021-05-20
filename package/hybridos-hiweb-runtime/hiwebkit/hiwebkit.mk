@@ -5,7 +5,7 @@
 ################################################################################
 
 HIWEBKIT_SITE = https://gitlab.fmsoft.cn/hybridos/hiwebkit
-HIWEBKIT_VERSION = 9d4d41783fe6279fb1d08da4012826ed0cae7c2b
+HIWEBKIT_VERSION = 98445c724c761d0b22ef8ac193f735af7564b541
 HIWEBKIT_SITE_METHOD = git
 HIWEBKIT_INSTALL_STAGING = YES
 HIWEBKIT_LICENSE = LGPL-2.1+, BSD-2-Clause
