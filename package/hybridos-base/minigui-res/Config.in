@@ -1,22 +1,18 @@
 config BR2_PACKAGE_MINIGUI_RES
 	bool "MiniGUI Resource (8.7 MB)"
     default y
-	select BR2_PACKAGE_MINIGUI
 	help
           http://www.minigui.org
 
 
 if BR2_PACKAGE_MINIGUI_RES
 
-config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS_CHINESE_MEDIUM
-	bool "sans-serif-hei-chinese-medium.ttf"
+config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
+    bool "iekie founts"
     default y
 
-config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS_LATIN_MEDIUM
-	bool "sans-serif-hei-latin-medium.ttf"
-
-config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS_LATIN_LIGHT
-	bool "sans-serif-hei-latin-light.ttf"
+config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
+    bool "adobe founts"
 
 endif
 

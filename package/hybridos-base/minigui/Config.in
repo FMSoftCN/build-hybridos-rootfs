@@ -7,6 +7,7 @@ config BR2_PACKAGE_MINIGUI
     select BR2_PACKAGE_HARFBUZZ
     select BR2_PACKAGE_PIXMAN
     select BR2_PACKAGE_LIBDRM
+    select BR2_PACKAGE_MINIGUI_RES
 	help
           http://www.minigui.org
 

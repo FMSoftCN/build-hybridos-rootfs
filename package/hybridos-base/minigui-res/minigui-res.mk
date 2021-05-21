@@ -18,28 +18,39 @@ define MINIGUI_RES_INSTALL_RES
 endef
 MINIGUI_RES_POST_INSTALL_TARGET_HOOKS += MINIGUI_RES_INSTALL_RES
 
-ifeq ($(BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS_CHINESE_MEDIUM),y)
-define MINIGUI_RES_INSTALL_IEKIE_FONTS_CHINESE_MEDIUM
+MINIGUI_RES_INSTALL_FONT = n
+ifeq ($(BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS),y)
+define MINIGUI_RES_INSTALL_IEKIE_FONTS
     $(INSTALL) -c -m 644 $(@D)/iekie-fonts/sans-serif-hei-chinese-medium.ttf \
         $(TARGET_DIR)/usr/share/fonts
-endef
-MINIGUI_RES_POST_INSTALL_TARGET_HOOKS += MINIGUI_RES_INSTALL_IEKIE_FONTS_CHINESE_MEDIUM
-endif
-
-ifeq ($(BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS_LATIN_MEDIUM),y)
-define MINIGUI_RES_INSTALL_IEKIE_FONTS_LATIN_MEDIUM
     $(INSTALL) -c -m 644 $(@D)/iekie-fonts/sans-serif-hei-latin-medium.ttf \
         $(TARGET_DIR)/usr/share/fonts
+    $(INSTALL) -c -m 644 $(@D)/iekie-fonts/sans-serif-hei-latin-light.ttf \
+        $(TARGET_DIR)/usr/share/fonts
+    MINIGUI_RES_INSTALL_FONT = y
 endef
-MINIGUI_RES_POST_INSTALL_TARGET_HOOKS += MINIGUI_RES_INSTALL_IEKIE_FONTS_LATIN_MEDIUM
+MINIGUI_RES_POST_INSTALL_TARGET_HOOKS += MINIGUI_RES_INSTALL_IEKIE_FONTS
 endif
 
-ifeq ($(BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS_LATIN_LIGHT),y)
-define MINIGUI_RES_INSTALL_IEKIE_FONTS_LATIN_LIGHT
+ifeq ($(BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS),y)
+define MINIGUI_RES_INSTALL_ADOBE_FONTS
+    $(INSTALL) -c -m 644 $(@D)/adobe-fonts/SourceHanSans-Regular.ttc \
+        $(TARGET_DIR)/usr/share/fonts
+    MINIGUI_RES_INSTALL_FONT = y
+endef
+MINIGUI_RES_POST_INSTALL_TARGET_HOOKS += MINIGUI_RES_INSTALL_ADOBE_FONTS
+endif
+
+ifneq ($(MINIGUI_RES_INSTALL_FONT),y)
+define MINIGUI_RES_INSTALL_DEFAULT_FONTS
+    $(INSTALL) -c -m 644 $(@D)/iekie-fonts/sans-serif-hei-chinese-medium.ttf \
+        $(TARGET_DIR)/usr/share/fonts
+    $(INSTALL) -c -m 644 $(@D)/iekie-fonts/sans-serif-hei-latin-medium.ttf \
+        $(TARGET_DIR)/usr/share/fonts
     $(INSTALL) -c -m 644 $(@D)/iekie-fonts/sans-serif-hei-latin-light.ttf \
         $(TARGET_DIR)/usr/share/fonts
 endef
-MINIGUI_RES_POST_INSTALL_TARGET_HOOKS += MINIGUI_RES_INSTALL_IEKIE_FONTS_LATIN_LIGHT
+MINIGUI_RES_POST_INSTALL_TARGET_HOOKS += MINIGUI_RES_INSTALL_DEFAULT_FONTS
 endif
 
 
