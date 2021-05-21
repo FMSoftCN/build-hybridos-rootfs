@@ -1,17 +1,17 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 823ef4b..3b56914 100644
+index 7c78f84..1cb5887 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.10)
+@@ -2,12 +2,7 @@ cmake_minimum_required(VERSION 3.10)
  
  set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
  
 -set(HYBRIDOS_ROOT_PATH "$ENV{HYBRIDOS_OUTPUT_ROOT}")
--INCLUDE_DIRECTORIES("${HYBRIDOS_ROOT_PATH}/include" "${HYBRIDOS_ROOT_PATH}/usr/include")
--LINK_DIRECTORIES("${HYBRIDOS_ROOT_PATH}/lib" "${HYBRIDOS_ROOT_PATH}/usr/lib")
-+#set(HYBRIDOS_ROOT_PATH "$ENV{HYBRIDOS_OUTPUT_ROOT}")
-+#INCLUDE_DIRECTORIES("${HYBRIDOS_ROOT_PATH}/include" "${HYBRIDOS_ROOT_PATH}/usr/include")
-+#LINK_DIRECTORIES("${HYBRIDOS_ROOT_PATH}/lib" "${HYBRIDOS_ROOT_PATH}/usr/lib")
+-set(ROOT_PATH "$ENV{ROOT_PATH}")
+-set(ENV{PKG_CONFIG_PATH} "${ROOT_PATH}/usr/lib/pkgconfig:${ROOT_PATH}/usr/local/lib/pkgconfig:${HYBRIDOS_ROOT_PATH}/usr/local/lib/pkgconfig:${HYBRIDOS_ROOT_PATH}/lib/pkgconfig:${HYBRIDOS_ROOT_PATH}/share/pkgconfig")
  
- find_package(MbedTLS REQUIRED)
- find_package(Securec REQUIRED)
+-INCLUDE_DIRECTORIES("${ROOT_PATH}/usr/include" "${ROOT_PATH}/usr/local/include" "${HYBRIDOS_ROOT_PATH}/include" "${HYBRIDOS_ROOT_PATH}/usr/include" "${HYBRIDOS_ROOT_PATH}/usr/local/include")
+-LINK_DIRECTORIES("${ROOT_PATH}/usr/lib" "${ROOT_PATH}/usr/local/lib" "${HYBRIDOS_ROOT_PATH}/lib" "${HYBRIDOS_ROOT_PATH}/usr/lib" "${HYBRIDOS_ROOT_PATH}/usr/local/lib")
+ 
+ OPTION(PLATFORM_R818 "Compiled for platform R818" OFF)
+ if(PLATFORM_R818)
