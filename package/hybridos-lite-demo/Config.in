@@ -1,11 +1,15 @@
 config BR2_PACKAGE_HYBRIDOS_LITE_DEMO
 	bool "HybridOS lite demo"
-    select BR2_PACKAGE_HYBRIDOS_BASE
+    select BR2_PACKAGE_MINIGUI
+    select BR2_PACKAGE_MGPLUS
+    select BR2_PACKAGE_MGEFF
+    select BR2_PACKAGE_HIDRMDRIVERS
+    select BR2_PACKAGE_HICAIRO
+    select BR2_PACKAGE_HIBOX
+    select BR2_PACKAGE_HIBUS
+    select BR2_PACKAGE_HIDOMLAYOUT
+    select BR2_PACKAGE_HISVG
 	select BR2_PACKAGE_LIBGLIB2
-	select BR2_PACKAGE_MINIGUI
-	select BR2_PACKAGE_MGEFF
-	select BR2_PACKAGE_HICAIRO
-	select BR2_PACKAGE_HISVG
 	help
       The sample codes are for HybridOS Lite version, 
       mginit and some samples are inclusive. 

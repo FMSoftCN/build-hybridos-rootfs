@@ -1,14 +1,7 @@
-config BR2_PACKAGE_HYBRIDOS_BASE
-	bool "HyBridOS base libraries"
-	help
-	  Enable building HyBridOS Base libraries, such as MiniGUI, mGUtils, mGEff, hiCairo and so on.
-
-if BR2_PACKAGE_HYBRIDOS_BASE
 source "package/hybridos-base/minigui/Config.in"
 source "package/hybridos-base/minigui-res/Config.in"
 source "package/hybridos-base/mgplus/Config.in"
 source "package/hybridos-base/mgeff/Config.in"
-source "package/hybridos-base/mgncs/Config.in"
 source "package/hybridos-base/mgncs4touch/Config.in"
 source "package/hybridos-base/hidrmdrivers/Config.in"
 source "package/hybridos-base/hicairo/Config.in"
@@ -16,5 +9,4 @@ source "package/hybridos-base/hibox/Config.in"
 source "package/hybridos-base/hibus/Config.in"
 source "package/hybridos-base/hidomlayout/Config.in"
 source "package/hybridos-base/hisvg/Config.in"
-endif
 
