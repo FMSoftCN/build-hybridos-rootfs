@@ -10,13 +10,7 @@ This instruction assumes that you are using Ubuntu Linux 18.04/20.04 LTS.
    + [Options for build script](#options-for-build-script)
 - [Copying](#copying)
 
-## Current Status
-
-Currently, the latest official release of MiniGUI is version 5.0.6.
-
-Main enhancements of MiniGUI Core and its components are as follow:
-
-## Building MiniGUI
+## Building HybridOS rootfs
 
 ### Prerequisites
 
