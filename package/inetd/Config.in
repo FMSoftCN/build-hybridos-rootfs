@@ -1,5 +1,5 @@
 config BR2_PACKAGE_INETD
-	bool "inetd"
+	bool "inetd (252 KB)"
 	select BR2_PACKAGE_HIBOX
 	select BR2_PACKAGE_HIBUS
 	help

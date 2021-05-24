@@ -1,5 +1,5 @@
 config BR2_PACKAGE_JERRYSCRIPT
-	bool "JerryScript"
+	bool "JerryScript (412 KB)"
     default y
 	help
       https://jerryscript.net/

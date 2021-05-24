@@ -1,5 +1,5 @@
 config BR2_PACKAGE_MGNCS4TOUCH
-	bool "mGNCS4Touch (104 KB)"
+	bool "mGNCS4Touch (228 KB)"
 	select BR2_PACKAGE_MINIGUI
 	select BR2_PACKAGE_MGPLUS
 	select BR2_PACKAGE_LIBXML2

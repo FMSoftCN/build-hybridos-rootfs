@@ -3,7 +3,7 @@ HISHELL_VERSION = c9e1d19d9eee2a955c6ae0f0f79077b7202f2ed7
 HISHELL_SITE_METHOD = git
 HISHELL_INSTALL_STAGING = YES
 
-HISHELL_DEPENDENCIES = mgeff hiwebkit hiacejs
+HISHELL_DEPENDENCIES = mgeff hicairo hiwebkit hiacejs hisvg hidomlayout
 
 
 define HISHELL_INSTALL_FONT

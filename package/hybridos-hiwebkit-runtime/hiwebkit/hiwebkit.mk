@@ -15,7 +15,7 @@ HIWEBKIT_LICENSE_FILES = \
 HIWEBKIT_DEPENDENCIES = host-ruby host-python host-gperf \
 	enchant icu harfbuzz jpeg libgcrypt libsecret libsoup \
 	libtasn1 libxml2 libxslt openjpeg sqlite webp woff2 atk \
-	hibus minigui
+	hibus hicairo minigui
 HIWEBKIT_CONF_OPTS = \
 	-DPORT=HBD \
 	-DCMAKE_EXPORT_COMPILE_COMMANDS=ON \

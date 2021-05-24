@@ -30,9 +30,16 @@ HICAIRO_CONF_OPTS = \
 	--enable-glesv3=no \
 	--enable-egl=no \
     --enable-glx=no \
-	--enable-interpreter=no
+	--enable-interpreter=no \
+	--enable-pdf=yes \
+	--enable-png=yes \
+	--enable-svg=yes \
+	--enable-ps=no \
+	--enable-script=no \
+	--enable-tee=no \
+	--enable-xml=no
 
-HICAIRO_DEPENDENCIES = host-pkgconf fontconfig pixman minigui
+HICAIRO_DEPENDENCIES = host-pkgconf libpng fontconfig pixman minigui
 
 # Just the bare minimum to make other host-* packages happy
 HOST_HICAIRO_CONF_OPTS = \
@@ -123,50 +130,6 @@ else
 HICAIRO_CONF_OPTS += --enable-xlib-xrender=no
 endif
 
-ifeq ($(BR2_PACKAGE_HICAIRO_PS),y)
-HICAIRO_CONF_OPTS += --enable-ps=yes
-HICAIRO_DEPENDENCIES += zlib
-else
-HICAIRO_CONF_OPTS += --enable-ps=no
-endif
-
-ifeq ($(BR2_PACKAGE_HICAIRO_PDF),y)
-HICAIRO_CONF_OPTS += --enable-pdf=yes
-HICAIRO_DEPENDENCIES += zlib
-else
-HICAIRO_CONF_OPTS += --enable-pdf=no
-endif
-
-ifeq ($(BR2_PACKAGE_HICAIRO_PNG),y)
-HICAIRO_CONF_OPTS += --enable-png=yes
-HICAIRO_DEPENDENCIES += libpng
-else
-HICAIRO_CONF_OPTS += --enable-png=no
-endif
-
-ifeq ($(BR2_PACKAGE_HICAIRO_SCRIPT),y)
-HICAIRO_CONF_OPTS += --enable-script=yes
-else
-HICAIRO_CONF_OPTS += --enable-script=no
-endif
-
-ifeq ($(BR2_PACKAGE_HICAIRO_SVG),y)
-HICAIRO_CONF_OPTS += --enable-svg=yes
-else
-HICAIRO_CONF_OPTS += --enable-svg=no
-endif
-
-ifeq ($(BR2_PACKAGE_HICAIRO_TEE),y)
-HICAIRO_CONF_OPTS += --enable-tee=yes
-else
-HICAIRO_CONF_OPTS += --enable-tee=no
-endif
-
-ifeq ($(BR2_PACKAGE_HICAIRO_XML),y)
-HICAIRO_CONF_OPTS += --enable-xml=yes
-else
-HICAIRO_CONF_OPTS += --enable-xml=no
-endif
 
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))

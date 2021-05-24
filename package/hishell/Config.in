@@ -1,7 +1,9 @@
 config BR2_PACKAGE_HISHELL
-	bool "hiShell"
+	bool "hiShell (3.3 MB)"
 	select BR2_PACKAGE_HYBRIDOS_HIACEJS_RUNTIME
 	select BR2_PACKAGE_HYBRIDOS_HIWEBKIT_RUNTIME
+	select BR2_PACKAGE_HISVG
+	select BR2_PACKAGE_HIDOMLAYOUT
 	help
       Hybridos shell
       https://hybridos.fmsoft.cn/

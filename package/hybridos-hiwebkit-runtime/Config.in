@@ -1,5 +1,5 @@
 config BR2_PACKAGE_HYBRIDOS_HIWEBKIT_RUNTIME
-	bool "HyBridOS hiWeb Runtime"
+	bool "HyBridOS hiWebKit Runtime"
     select BR2_PACKAGE_MINIGUI
     select BR2_PACKAGE_MGPLUS
     select BR2_PACKAGE_MGEFF
@@ -8,7 +8,7 @@ config BR2_PACKAGE_HYBRIDOS_HIWEBKIT_RUNTIME
     select BR2_PACKAGE_HIBOX
     select BR2_PACKAGE_HIBUS
 	help
-	  HyBridOS hiWeb Runtime (hiWebKit)
+	  HyBridOS hiWebKit Runtime
 
 if BR2_PACKAGE_HYBRIDOS_HIWEBKIT_RUNTIME
 source "package/hybridos-hiwebkit-runtime/libproxy/Config.in"

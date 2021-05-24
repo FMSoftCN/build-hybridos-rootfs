@@ -11,4 +11,7 @@ endef
 MGNCS_PRE_CONFIGURE_HOOKS += MGNCS_RUN_AUTOGEN
 
 
+MGNCS_CONF_OPTS = --disable-ctrlcolorbutton
+
+
 $(eval $(autotools-package))

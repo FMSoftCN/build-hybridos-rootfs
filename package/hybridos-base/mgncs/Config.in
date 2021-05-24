@@ -1,5 +1,5 @@
 config BR2_PACKAGE_MGNCS
-	bool "mGNCS (104 KB)"
+	bool "mGNCS (1.8 MB)"
 	select BR2_PACKAGE_MINIGUI
 	select BR2_PACKAGE_MGPLUS
 	select BR2_PACKAGE_LIBXML2

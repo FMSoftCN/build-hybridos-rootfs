@@ -1,5 +1,5 @@
 config BR2_PACKAGE_HIACEJS
-	bool "hiAceJS"
+	bool "hiAceJS (1008 KB)"
     default y
 	select BR2_PACKAGE_JPEG
 	select BR2_PACKAGE_LIBPNG

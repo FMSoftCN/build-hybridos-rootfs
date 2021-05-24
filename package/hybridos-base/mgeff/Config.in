@@ -1,5 +1,5 @@
 config BR2_PACKAGE_MGEFF
-	bool "mGEff (40 KB)"
+	bool "mGEff (92 KB)"
     default y
 	select BR2_PACKAGE_MINIGUI
 	select BR2_PACKAGE_MGPLUS

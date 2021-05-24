@@ -1,5 +1,5 @@
 config BR2_PACKAGE_LIBPROXY
-	bool "libproxy"
+	bool "libproxy (92 KB)"
     default y
 	help
       libproxy

@@ -17,37 +17,3 @@ config BR2_PACKAGE_HICAIRO
 
 	  http://cairographics.org/
 
-if BR2_PACKAGE_HICAIRO
-
-config BR2_PACKAGE_HICAIRO_PS
-	bool "postscript support"
-	select BR2_PACKAGE_ZLIB
-	select BR2_PACKAGE_HICAIRO_PDF
-
-config BR2_PACKAGE_HICAIRO_PDF
-	bool "pdf support"
-	select BR2_PACKAGE_ZLIB
-
-config BR2_PACKAGE_HICAIRO_PNG
-	bool "png support"
-	select BR2_PACKAGE_LIBPNG
-	select BR2_PACKAGE_ZLIB
-
-config BR2_PACKAGE_HICAIRO_SCRIPT
-	bool "script support"
-	select BR2_PACKAGE_HICAIRO_PNG
-
-config BR2_PACKAGE_HICAIRO_SVG
-	bool "svg support"
-    default y
-	select BR2_PACKAGE_HICAIRO_PNG
-	select BR2_PACKAGE_HICAIRO_PDF
-
-config BR2_PACKAGE_HICAIRO_TEE
-	bool "tee support"
-
-config BR2_PACKAGE_HICAIRO_XML
-	bool "xml support"
-	select BR2_PACKAGE_HICAIRO_PNG
-
-endif

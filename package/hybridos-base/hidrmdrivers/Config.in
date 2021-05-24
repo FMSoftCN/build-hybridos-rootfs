@@ -1,5 +1,5 @@
 config BR2_PACKAGE_HIDRMDRIVERS
-	bool "hiDRMDrivers"
+	bool "hiDRMDrivers (8 KB)"
 	select BR2_PACKAGE_MINIGUI
 	select BR2_PACKAGE_LIBDRM
 	help

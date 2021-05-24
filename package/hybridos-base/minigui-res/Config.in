@@ -1,5 +1,5 @@
 config BR2_PACKAGE_MINIGUI_RES
-	bool "MiniGUI Resource (8.7 MB)"
+	bool "MiniGUI Resource"
     default y
 	help
           http://www.minigui.org
@@ -8,11 +8,11 @@ config BR2_PACKAGE_MINIGUI_RES
 if BR2_PACKAGE_MINIGUI_RES
 
 config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
-    bool "iekie founts"
+    bool "iekie fonts (13 MB)"
     default y
 
 config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
-    bool "adobe founts"
+    bool "adobe fonts (50 MB)"
 
 endif
 

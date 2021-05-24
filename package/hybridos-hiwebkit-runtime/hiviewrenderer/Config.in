@@ -1,5 +1,5 @@
 config BR2_PACKAGE_HIVIEWRENDERER
-	bool "hiViewRenderer"
+	bool "hiViewRenderer (112 KB)"
 	select BR2_PACKAGE_HIWEBKIT
 	help
 	  hiView Renderer
