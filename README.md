@@ -140,7 +140,9 @@ $ make
 $ make menuconfig
 ```
 
-* `Target options` : 修改目标平台内容，比如CPU类型，浮点数处理等等
+* `Target options` : 修改目标平台内容，比如CPU类型，浮点数处理等等，如下图所示：
+![Target option 菜单](doc/img/menuconfig.png)
+
 * `Toolchain` : 修改工具链相关选项，比如 gcc, glibc 等
 * `Target packages` : 修改要编译的软件包
 
