@@ -142,6 +142,10 @@ $ make menuconfig
 
 ![menuconfig 菜单](docs/img/menuconfig.png)
 
+
+下面简单介绍一下主要的菜单，如下:
+
+
 * `Target options` : 修改目标平台内容，比如CPU类型，浮点数处理等等，如下图所示：
 
 ![Target option 菜单](docs/img/menuconfig_target_option.png)
@@ -153,6 +157,25 @@ $ make menuconfig
 * `Target packages` : 修改要编译的软件包
 
 ![Target packages 菜单](docs/img/menuconfig_target_package.png)
+
+
+* `Target packages --> HybridOS` : HybridOS 主要相关软件包的菜单
+
+![Target packages hybridos 菜单](docs/img/menuconfig_target_packages_hybridos.png)
+
+
+* `Target packages --> HybridOS --> HybridOS Base Libraries` : HybridOS 基础软件包菜单
+
+![Target packages hybridos 菜单](docs/img/menuconfig_target_packages_hybridos_base_libraries.png)
+
+* `Target packages --> HybridOS --> HybridOS Runtime` : HybridOS Runtime 软件包菜单
+
+![Target packages hybridos 菜单](docs/img/menuconfig_target_packages_hybridos_runtime.png)
+
+* `Target packages --> HybridOS --> Applications` : HybridOS Applications 软件包菜单
+
+![Target packages hybridos 菜单](docs/img/menuconfig_target_packages_hybridos_application.png)
+
 
 ## 版权声明
 
