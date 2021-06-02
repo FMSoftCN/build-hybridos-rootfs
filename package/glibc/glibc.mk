@@ -19,6 +19,10 @@ else ifeq ($(BR2_RISCV_32),y)
 # RISC-V 32-bit (RV32) requires glibc 2.33 or newer
 # Until 2.33 is released, just use master
 GLIBC_VERSION = 2.32.9000-69-gbd394d131c10c9ec22c6424197b79410042eed99
+else ifeq ($(BR2_PACKAGE_GLIBC_2_29),y)
+GLIBC_VERSION = 2.29-11-ge28ad442e73b00ae2047d89c8cc7f9b2a0de5436
+else ifeq ($(BR2_PACKAGE_GLIBC_2_31),y)
+GLIBC_VERSION = 2.31-74-gd0c84d22b6a67f85a1eed3b93aef30e6953294b5
 else
 GLIBC_VERSION = 2.31-74-gd0c84d22b6a67f85a1eed3b93aef30e6953294b5
 endif
