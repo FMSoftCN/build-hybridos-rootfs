@@ -17,6 +17,17 @@ config BR2_BINUTILS_VERSION_2_32_X
 	bool "binutils 2.32"
 	depends on !BR2_csky
 
+config BR2_BINUTILS_VERSION_2_27_X
+	bool "binutils 2.27"
+	# binutils 2.27 triggers a bug in elf2flt on ARM/noMMU
+	depends on !(BR2_arm && !BR2_USE_MMU)
+
+config BR2_BINUTILS_VERSION_2_28_X
+	bool "binutils 2.28.1"
+
+config BR2_BINUTILS_VERSION_2_29_X
+	bool "binutils 2.29"
+
 config BR2_BINUTILS_VERSION_2_33_X
 	bool "binutils 2.33.1"
 	depends on !BR2_csky
@@ -52,6 +63,9 @@ config BR2_BINUTILS_VERSION
 	string
 	default "arc-2020.09-release"	if BR2_BINUTILS_VERSION_ARC
 	default "c66d8bbcebfddf713b2b436e1b135e6b125a55a5" if BR2_BINUTILS_VERSION_CSKY
+	default "2.27"		if BR2_BINUTILS_VERSION_2_27_X
+	default "2.28.1"	if BR2_BINUTILS_VERSION_2_28_X
+	default "2.29"		if BR2_BINUTILS_VERSION_2_29_X
 	default "2.32"		if BR2_BINUTILS_VERSION_2_32_X
 	default "2.33.1"	if BR2_BINUTILS_VERSION_2_33_X
 	default "2.34"		if BR2_BINUTILS_VERSION_2_34_X

@@ -7,6 +7,11 @@
 ifeq ($(BR2_csky),y)
 GLIBC_VERSION = 7630ed2fa60caea98f500e4a7a51b88f9bf1e176
 GLIBC_SITE = $(call github,c-sky,glibc,$(GLIBC_VERSION))
+else ifeq ($(BR2_PACKAGE_GLIBC_2_25),y)
+GLIBC_VERSION = 2.25
+GLIBC_SITE = $(BR2_GNU_MIRROR)/libc
+GLIBC_SOURCE = glibc-$(GLIBC_VERSION).tar.xz
+GLIBC_SRC_SUBDIR = .
 else
 # Generate version string using:
 #   git describe --match 'glibc-*' --abbrev=40 origin/release/MAJOR.MINOR/master | cut -d '-' -f 2-
