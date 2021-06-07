@@ -11,3 +11,19 @@ config BR2_PACKAGE_MINIGUI
 	help
           http://www.minigui.org
 
+
+if BR2_PACKAGE_MINIGUI
+choice
+    prompt "target board name"
+    default BR2_PACKAGE_MINIGUI_TARGET_NAME_UNKNOW
+    help
+      Select the version of glibc you wish to use.
+
+config BR2_PACKAGE_MINIGUI_TARGET_NAME_UNKNOW
+    bool "unknown"
+
+config BR2_PACKAGE_MINIGUI_TARGET_NAME_R818
+    bool "r818"
+
+endchoice
+endif
