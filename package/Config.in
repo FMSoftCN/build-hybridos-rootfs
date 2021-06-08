@@ -1,4 +1,4 @@
-menu "Target packages"
+menu "External packages"
 
 	source "package/busybox/Config.in"
 	source "package/skeleton/Config.in"
@@ -165,27 +165,27 @@ menu "Filesystem and flash utilities"
 	source "package/xfsprogs/Config.in"
 endmenu
 
-menu "HybridOS"
-
-    source "package/hybridos/Config.in"
-    source "package/hybridos-lite/Config.in"
-
-menu "HybridOS Base Libraries"
-    source "package/hybridos-base/Config.in"
-endmenu
-
-menu "HybridOS Runtime"
-    source "package/hybridos-hiwebkit-runtime/Config.in"
-    source "package/hybridos-hiacejs-runtime/Config.in"
-endmenu
-
-menu "Applications"
-	source "package/inetd/Config.in"
-	source "package/hishell/Config.in"
-	source "package/hybridos-lite-demo/Config.in"
-endmenu
-
-endmenu
+#menu "HybridOS"
+#
+#    source "package/hybridos/Config.in"
+#    source "package/hybridos-lite/Config.in"
+#
+#menu "HybridOS Base Libraries"
+#    source "package/hybridos-base/Config.in"
+#endmenu
+#
+#menu "HybridOS Runtime"
+#    source "package/hybridos-hiwebkit-runtime/Config.in"
+#    source "package/hybridos-hiacejs-runtime/Config.in"
+#endmenu
+#
+#menu "Applications"
+#	source "package/inetd/Config.in"
+#	source "package/hishell/Config.in"
+#	source "package/hybridos-lite-demo/Config.in"
+#endmenu
+#
+#endmenu
 
 menu "Hardware handling"
 menu "Firmware"

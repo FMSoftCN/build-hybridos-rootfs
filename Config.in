@@ -80,6 +80,22 @@ config BR2_HOSTARCH_NEEDS_IA32_COMPILER
 config BR2_NEEDS_HOST_UTF8_LOCALE
 	bool
 
+choice
+    prompt "Target Board name"
+    default BR2_TARGET_BOARD_R818
+    help
+      Select the version of glibc you wish to use.
+
+config BR2_TARGET_BOARD_R818
+    bool "r818"
+
+config BR2_TARGET_BOARD_PX30
+    bool "px30"
+
+endchoice
+
+
+menu "Target Common"
 source "arch/Config.in"
 
 menu "Build options"
@@ -884,15 +900,73 @@ source "system/Config.in"
 
 source "linux/Config.in"
 
-source "package/Config.in"
-
 source "fs/Config.in"
 
 source "boot/Config.in"
 
+endmenu # Target Common
+
+choice
+    prompt "Frameworks"
+    default BR2_FRAMEWORKS_HIWEBKIT
+    help
+      Select the version of glibc you wish to use.
+
+config BR2_FRAMEWORKS_HIWEBKIT
+    bool "hiWebKit Frameworks"
+
+config BR2_FRAMEWORKS_HIACEJS
+    bool "hiAceJS Frameworks"
+
+config BR2_FRAMEWORKS_C
+    bool "C frameworks"
+
+endchoice
+
+if BR2_FRAMEWORKS_HIWEBKIT
+menu "hiWebKit FrameWorks"
+menu "Base Libraries"
+    source "package/hybridos-base/Config.in"
+endmenu
+    source "package/hybridos-hiwebkit-runtime/Config.in"
+endmenu
+endif
+
+if BR2_FRAMEWORKS_HIACEJS
+menu "hiAceJS FrameWorks"
+menu "Base Libraries"
+    source "package/hybridos-base/Config.in"
+endmenu
+    source "package/hybridos-hiacejs-runtime/Config.in"
+endmenu
+endif
+
+if BR2_FRAMEWORKS_C
+menu "C FrameWorks"
+menu "Base Libraries"
+    source "package/hybridos-base/Config.in"
+endmenu
+endmenu
+endif
+
+menu "Packages"
+menu "Services"
+	source "package/inetd/Config.in"
+endmenu
+menu "Apps"
+	source "package/hishell/Config.in"
+	source "package/hybridos-lite-demo/Config.in"
+endmenu
+endmenu
+
+source "package/Config.in"
+
+
+menu "Other"
 source "package/Config.in.host"
 
 source "Config.in.legacy"
+endmenu
 
 # br2-external menus definitions
 source "$BR2_BASE_DIR/.br2-external.in.menus"
