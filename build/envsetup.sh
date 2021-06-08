@@ -161,5 +161,15 @@ function envsetup
     echo "Setup env done! Please run lunch next."
 }
 
+function m
+{
+    local T=$(gettop)
+    [ -z "$T" ] \
+        && echo "Couldn't locate the top of the tree.  Try setting TOP." \
+        && return
+
+    (\cd $T && time make $@ V=1 2>&1 | tee .build.log)
+}
+
 #### MAIN ####
 envsetup
