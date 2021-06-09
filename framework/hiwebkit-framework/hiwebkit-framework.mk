@@ -1,1 +1,1 @@
-include $(sort $(wildcard framework/base/*/*.mk))
+include $(sort $(wildcard framework/hiwebkit-framework/*/*.mk))

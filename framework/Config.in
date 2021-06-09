@@ -32,7 +32,7 @@ menu "hiAceJS Framework"
 menu "Base Libraries"
     source "framework/base/Config.in"
 endmenu
-    source "package/hybridos-hiacejs-runtime/Config.in"
+    source "framework/hiacejs-framework/Config.in"
 endmenu
 endif
 
