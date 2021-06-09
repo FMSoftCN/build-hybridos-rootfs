@@ -82,14 +82,14 @@ config BR2_NEEDS_HOST_UTF8_LOCALE
 
 choice
     prompt "Target name"
-    default BR2_TARGET_BOARD_R818
+    default BR2_TARGET_NAME_r818
     help
       Select the version of glibc you wish to use.
 
-config BR2_TARGET_BOARD_R818
+config BR2_TARGET_NAME_r818
     bool "r818"
 
-config BR2_TARGET_BOARD_PX30
+config BR2_TARGET_NAME_px30
     bool "px30"
 
 endchoice

@@ -23,7 +23,7 @@ menu "hiWebKit Framework"
 menu "Base Libraries"
     source "framework/base/Config.in"
 endmenu
-    source "package/hybridos-hiwebkit-runtime/Config.in"
+    source "framework/hiwebkit-framework/Config.in"
 endmenu
 endif
 

@@ -1,0 +1,2 @@
+source "framework/hiwebkit-framework/hiwebkit/Config.in"
+source "framework/hiwebkit-framework/hiviewrenderer/Config.in"
