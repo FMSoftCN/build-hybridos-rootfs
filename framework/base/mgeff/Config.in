@@ -1,4 +1,4 @@
-config BR2_PACKAGE_MGEFF
+config BR2_FRAMEWORK_BASE_MGEFF
 	bool "mGEff (92 KB)"
     default y
 	select BR2_PACKAGE_MINIGUI

@@ -1,4 +1,4 @@
-config BR2_PACKAGE_MGPLUS
+config BR2_FRAMEWORK_BASE_MGPLUS
 	bool "mGPlus (788 KB)"
 	select BR2_PACKAGE_MINIGUI
 	help

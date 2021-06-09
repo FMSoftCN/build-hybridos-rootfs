@@ -1,4 +1,4 @@
-config BR2_PACKAGE_HIBOX
+config BR2_FRAMEWORK_BASE_HIBOX
 	bool "hiBox (132 KB)"
     default y
 	help

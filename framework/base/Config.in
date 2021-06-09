@@ -1,0 +1,13 @@
+source "framework/base/minigui/Config.in"
+source "framework/base/minigui-res/Config.in"
+source "framework/base/mgplus/Config.in"
+source "framework/base/mgeff/Config.in"
+source "framework/base/mgncs/Config.in"
+source "framework/base/mgncs4touch/Config.in"
+source "framework/base/hidrmdrivers/Config.in"
+source "framework/base/hicairo/Config.in"
+source "framework/base/hibox/Config.in"
+source "framework/base/hibus/Config.in"
+source "framework/base/hidomlayout/Config.in"
+source "framework/base/hisvg/Config.in"
+

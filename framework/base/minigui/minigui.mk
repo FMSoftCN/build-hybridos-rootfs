@@ -22,7 +22,7 @@ MINIGUI_CONF_OPTS = \
     --with-hb-includes=$(STAGING_DIR)/usr/include/harfbuzz \
     --enable-virtualwindow
 
-ifeq ($(BR2_PACKAGE_MINIGUI_TARGET_NAME_R818),y)
+ifeq ($(BR2_TARGET_NAME_r818),y)
 	MINIGUI_CONF_OPTS += --with-targetname=r818
 endif
 

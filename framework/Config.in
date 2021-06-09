@@ -21,7 +21,7 @@ endchoice
 if BR2_FRAMEWORK_HIWEBKIT
 menu "hiWebKit Framework"
 menu "Base Libraries"
-    source "package/hybridos-base/Config.in"
+    source "framework/base/Config.in"
 endmenu
     source "package/hybridos-hiwebkit-runtime/Config.in"
 endmenu
@@ -30,7 +30,7 @@ endif
 if BR2_FRAMEWORK_HIACEJS
 menu "hiAceJS Framework"
 menu "Base Libraries"
-    source "package/hybridos-base/Config.in"
+    source "framework/base/Config.in"
 endmenu
     source "package/hybridos-hiacejs-runtime/Config.in"
 endmenu
@@ -39,7 +39,7 @@ endif
 if BR2_FRAMEWORK_BASIC_C
 menu "C Frameworks"
 menu "Basic C Framework"
-    source "package/hybridos-base/Config.in"
+    source "framework/base/Config.in"
 endmenu
 endmenu
 endif
@@ -47,7 +47,7 @@ endif
 if BR2_FRAMEWORK_MGNCS_BASED_C
 menu "mGNCS-based C Framework"
 menu "Base Libraries"
-    source "package/hybridos-base/Config.in"
+    source "framework/base/Config.in"
 endmenu
 endmenu
 endif

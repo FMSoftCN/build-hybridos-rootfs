@@ -1,0 +1,14 @@
+config BR2_FRAMEWORK_BASE_MINIGUI
+	bool "MiniGUI (2.9 MB)"
+    default y
+	select BR2_PACKAGE_JPEG
+	select BR2_PACKAGE_LIBPNG
+	select BR2_PACKAGE_FREETYPE
+    select BR2_PACKAGE_HARFBUZZ
+    select BR2_PACKAGE_PIXMAN
+    select BR2_PACKAGE_LIBDRM
+    select BR2_FRAMEWORK_BASE_MINIGUI_RES
+	help
+          http://www.minigui.org
+
+
