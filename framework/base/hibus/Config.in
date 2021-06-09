@@ -1,4 +1,4 @@
-config BR2_FRAMEWORK_BASE_HIBUS
+config BR2_PACKAGE_HIBUS
 	bool "hiBus (48 KB)"
     default y
 	select BR2_PACKAGE_HIBOX

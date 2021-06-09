@@ -1,4 +1,4 @@
-config BR2_FRAMEWORK_BASE_HIDOMLAYOUT
+config BR2_PACKAGE_HIDOMLAYOUT
 	bool "hiDomLayout (576 KB)"
 	select BR2_PACKAGE_LIBGLIB2
 	help
