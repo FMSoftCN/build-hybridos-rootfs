@@ -36,17 +36,17 @@ endmenu
 endmenu
 endif
 
-if BR2_FRAMEWORK_BASIC_C
-menu "C Frameworks"
-menu "Basic C Framework"
+if BR2_FRAMEWORK_MGNCS_BASED_C
+menu "mGNCS-based C Framework"
+menu "Base Libraries"
     source "framework/base/Config.in"
 endmenu
 endmenu
 endif
 
-if BR2_FRAMEWORK_MGNCS_BASED_C
-menu "mGNCS-based C Framework"
-menu "Base Libraries"
+if BR2_FRAMEWORK_BASIC_C
+menu "Basic C Frameworks"
+menu "Basic C Framework"
     source "framework/base/Config.in"
 endmenu
 endmenu
