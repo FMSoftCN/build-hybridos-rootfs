@@ -81,7 +81,7 @@ config BR2_NEEDS_HOST_UTF8_LOCALE
 	bool
 
 choice
-    prompt "Target Board name"
+    prompt "Target name"
     default BR2_TARGET_BOARD_R818
     help
       Select the version of glibc you wish to use.
@@ -95,7 +95,7 @@ config BR2_TARGET_BOARD_PX30
 endchoice
 
 
-menu "Target Common"
+menu "Global options"
 source "arch/Config.in"
 
 menu "Build options"
@@ -904,27 +904,30 @@ source "fs/Config.in"
 
 source "boot/Config.in"
 
-endmenu # Target Common
+endmenu # Global Option
 
 choice
-    prompt "Frameworks"
-    default BR2_FRAMEWORKS_HIWEBKIT
+    prompt "App Framework"
+    default BR2_FRAMEWORK_HIWEBKIT
     help
       Select the version of glibc you wish to use.
 
-config BR2_FRAMEWORKS_HIWEBKIT
-    bool "hiWebKit Frameworks"
+config BR2_FRAMEWORK_HIWEBKIT
+    bool "hiWebKit Framework"
 
-config BR2_FRAMEWORKS_HIACEJS
-    bool "hiAceJS Frameworks"
+config BR2_FRAMEWORK_HIACEJS
+    bool "hiAceJS Framework"
 
-config BR2_FRAMEWORKS_C
-    bool "C frameworks"
+config BR2_FRAMEWORK_MGNCS_BASED_C
+    bool "mGNCS-based C Framework"
+
+config BR2_FRAMEWORK_BASIC_C
+    bool "Basic C Framework"
 
 endchoice
 
-if BR2_FRAMEWORKS_HIWEBKIT
-menu "hiWebKit FrameWorks"
+if BR2_FRAMEWORK_HIWEBKIT
+menu "hiWebKit Framework"
 menu "Base Libraries"
     source "package/hybridos-base/Config.in"
 endmenu
@@ -932,8 +935,8 @@ endmenu
 endmenu
 endif
 
-if BR2_FRAMEWORKS_HIACEJS
-menu "hiAceJS FrameWorks"
+if BR2_FRAMEWORK_HIACEJS
+menu "hiAceJS Framework"
 menu "Base Libraries"
     source "package/hybridos-base/Config.in"
 endmenu
@@ -941,8 +944,16 @@ endmenu
 endmenu
 endif
 
-if BR2_FRAMEWORKS_C
-menu "C FrameWorks"
+if BR2_FRAMEWORK_BASIC_C
+menu "C Frameworks"
+menu "Basic C Framework"
+    source "package/hybridos-base/Config.in"
+endmenu
+endmenu
+endif
+
+if BR2_FRAMEWORK_MGNCS_BASED_C
+menu "mGNCS-based C Framework"
 menu "Base Libraries"
     source "package/hybridos-base/Config.in"
 endmenu
