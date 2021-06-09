@@ -906,59 +906,7 @@ source "boot/Config.in"
 
 endmenu # Global Option
 
-choice
-    prompt "App Framework"
-    default BR2_FRAMEWORK_HIWEBKIT
-    help
-      Select the version of glibc you wish to use.
-
-config BR2_FRAMEWORK_HIWEBKIT
-    bool "hiWebKit Framework"
-
-config BR2_FRAMEWORK_HIACEJS
-    bool "hiAceJS Framework"
-
-config BR2_FRAMEWORK_MGNCS_BASED_C
-    bool "mGNCS-based C Framework"
-
-config BR2_FRAMEWORK_BASIC_C
-    bool "Basic C Framework"
-
-endchoice
-
-if BR2_FRAMEWORK_HIWEBKIT
-menu "hiWebKit Framework"
-menu "Base Libraries"
-    source "package/hybridos-base/Config.in"
-endmenu
-    source "package/hybridos-hiwebkit-runtime/Config.in"
-endmenu
-endif
-
-if BR2_FRAMEWORK_HIACEJS
-menu "hiAceJS Framework"
-menu "Base Libraries"
-    source "package/hybridos-base/Config.in"
-endmenu
-    source "package/hybridos-hiacejs-runtime/Config.in"
-endmenu
-endif
-
-if BR2_FRAMEWORK_BASIC_C
-menu "C Frameworks"
-menu "Basic C Framework"
-    source "package/hybridos-base/Config.in"
-endmenu
-endmenu
-endif
-
-if BR2_FRAMEWORK_MGNCS_BASED_C
-menu "mGNCS-based C Framework"
-menu "Base Libraries"
-    source "package/hybridos-base/Config.in"
-endmenu
-endmenu
-endif
+source "framework/Config.in"
 
 menu "Packages"
 menu "Services"
