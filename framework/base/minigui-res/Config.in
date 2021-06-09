@@ -1,6 +1,5 @@
 config BR2_PACKAGE_MINIGUI_RES
 	bool "MiniGUI Resource"
-    default y
 	help
           http://www.minigui.org
 

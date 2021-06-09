@@ -1,24 +1,3 @@
-config BR2_PACKAGE_HIWEBKIT_ARCH_SUPPORTS
-	bool
-	# ARM needs BLX, so v5t+, BE completely untested so disabled
-	default y if BR2_arm && !BR2_ARM_CPU_ARMV4
-	default y if BR2_aarch64 || BR2_aarch64_be
-	default y if BR2_i386 || BR2_x86_64
-	# Disabled on MIPS big endian due to sigbus
-	default y if BR2_mipsel || BR2_mips64el
-	# Disabled on PowerPC pending runtime testing
-	# Disabled on SuperH because of segfault
-	depends on BR2_USE_MMU # libglib2
-	depends on BR2_TOOLCHAIN_HAS_SYNC_4
-	depends on BR2_PACKAGE_LIBGPG_ERROR_ARCH_SUPPORTS # libgcrypt
-
-comment "hiWebKit needs a glibc toolchain w/ C++, gcc >= 7"
-	depends on BR2_PACKAGE_HIWEBKIT_ARCH_SUPPORTS
-	depends on !BR2_INSTALL_LIBSTDCPP || \
-		!BR2_TOOLCHAIN_USES_GLIBC || \
-		!BR2_TOOLCHAIN_GCC_AT_LEAST_7
-	depends on BR2_USE_MMU
-
 config BR2_PACKAGE_HIWEBKIT
 	bool "hiWebKit (69 MB)"
     default y

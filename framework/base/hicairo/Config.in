@@ -1,6 +1,5 @@
 config BR2_PACKAGE_HICAIRO
 	bool "hiCairo (752 KB)"
-    default y
 	select BR2_PACKAGE_PIXMAN
 	select BR2_PACKAGE_FONTCONFIG
 	select BR2_PACKAGE_MINIGUI
