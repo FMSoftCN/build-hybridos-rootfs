@@ -1,4 +1,7 @@
 # 
 
-source "app/system/hishell/Config.in"
 source "app/system/inetd/Config.in"
+
+if BR2_RUNMODE_MULTI_APP
+source "app/system/hishell/Config.in"
+endif

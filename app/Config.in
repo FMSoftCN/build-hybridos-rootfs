@@ -6,7 +6,7 @@ menu "System"
 	source "app/system/Config.in"
 endmenu
 menu "User"
-	source "package/hybridos-lite-demo/Config.in"
+	source "app/user/Config.in"
 endmenu
 
 endmenu # App

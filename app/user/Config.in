@@ -1,0 +1,5 @@
+# 
+
+if BR2_RUNMODE_SINGLE_APP
+	source "package/hybridos-lite-demo/Config.in"
+endif
