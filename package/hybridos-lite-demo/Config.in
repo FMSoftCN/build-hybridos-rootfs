@@ -1,5 +1,5 @@
 config BR2_PACKAGE_HYBRIDOS_LITE_DEMO
-	bool "HybridOS lite demo (556 KB)"
+	bool "HybridOS lite samples (556 KB)"
     select BR2_PACKAGE_MINIGUI
     select BR2_PACKAGE_MGPLUS
     select BR2_PACKAGE_MGEFF
