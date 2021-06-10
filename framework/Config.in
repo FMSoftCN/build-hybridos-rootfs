@@ -31,12 +31,26 @@ config BR2_RUNMODE_MULTI_APP
 endchoice
 
 menu "Fonts"
-config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
-    bool "iekie fonts (13 MB)"
-    default y
 
-config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
-    bool "adobe fonts (50 MB)"
+comment "Chinese Fonts"
+config BR2_FONTS_CHINESE_IEKIE_SANS_SERIF_HEI_MEDIUM
+    bool "iekie SansSerifHei Chinese Medium (13 MB)"
+    default y
+    select BR2_PACKAGE_MINIGUI_RES
+
+config R2_FONTS_CHINESE_ADOBE_SOURCE_HAN_SANS_REGULAR
+    bool "adobe SourceHanSans Regular (20 MB)"
+    select BR2_PACKAGE_MINIGUI_RES
+
+comment "English Fonts"
+config BR2_FONTS_ENGLISH_IEKIE_SANS_SERIF_HEI_MEDIUM
+    bool "iekie SansSerifHei Latin Medium (48 KB)"
+    select BR2_PACKAGE_MINIGUI_RES
+
+config BR2_FONTS_ENGLISH_IEKIE_SANS_SERIF_HEI_LIGHT
+    bool "iekie SansSerifHei Latin Light (48 KB)"
+    select BR2_PACKAGE_MINIGUI_RES
+
 endmenu # Fonts
 
 menu "Base Libraries"
