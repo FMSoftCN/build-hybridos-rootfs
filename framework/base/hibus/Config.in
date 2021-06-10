@@ -9,3 +9,9 @@ config BR2_PACKAGE_HIBUS
 	  for clients) for the device side of HybridOS.
 	  https://hybridos.fmsoft.cn/
 
+if BR2_PACKAGE_HIBUS
+
+config BR2_PACKAGE_HIBUS_BUILD_APP_AUTH
+	bool "build app auth"
+    default n
+endif
