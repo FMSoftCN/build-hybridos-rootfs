@@ -16,12 +16,7 @@ config BR2_PACKAGE_HIWEBKIT_ARCH_SUPPORTS
 
 menu "App Framework"
 
-choice
-    prompt "App Framework"
-    default BR2_FRAMEWORK_HIWEBKIT
-    help
-      Select the version of glibc you wish to use.
-
+menu "Runtime"
 comment "hiWebKit Framework needs a glibc toolchain w/ C++, gcc >= 7"
 	depends on BR2_PACKAGE_HIWEBKIT_ARCH_SUPPORTS
 	depends on !BR2_INSTALL_LIBSTDCPP || \
@@ -30,7 +25,8 @@ comment "hiWebKit Framework needs a glibc toolchain w/ C++, gcc >= 7"
 	depends on BR2_USE_MMU
 
 config BR2_FRAMEWORK_HIWEBKIT
-    bool "hiWebKit Framework"
+    bool "hiWebKit Runtime"
+    default y
 	depends on BR2_INSTALL_LIBSTDCPP
 	depends on BR2_TOOLCHAIN_GCC_AT_LEAST_7
 	depends on BR2_TOOLCHAIN_USES_GLIBC
@@ -47,8 +43,13 @@ config BR2_FRAMEWORK_HIWEBKIT
     select BR2_PACKAGE_HISVG
     select BR2_PACKAGE_HIWEBKIT
 
+if BR2_FRAMEWORK_HIWEBKIT
+    source "framework/hiwebkit-framework/Config.in"
+endif
+
 config BR2_FRAMEWORK_HIACEJS
-    bool "hiAceJS Framework"
+    bool "hiAceJS Runtime"
+    default y
     select BR2_PACKAGE_MINIGUI
     select BR2_PACKAGE_MINIGUI_RES
     select BR2_PACKAGE_MGPLUS
@@ -63,8 +64,12 @@ config BR2_FRAMEWORK_HIACEJS
     select BR2_PACKAGE_JERRYSCRIPT
     select BR2_PACKAGE_HIACEJS
 
+if BR2_FRAMEWORK_HIACEJS
+    source "framework/hiacejs-framework/Config.in"
+endif
+
 config BR2_FRAMEWORK_MGNCS_BASED_C
-    bool "mGNCS-based C Framework"
+    bool "mGNCS-based C Runtime"
     select BR2_PACKAGE_MINIGUI
     select BR2_PACKAGE_MINIGUI_RES
     select BR2_PACKAGE_MGPLUS
@@ -79,7 +84,7 @@ config BR2_FRAMEWORK_MGNCS_BASED_C
     select BR2_PACKAGE_HISVG
 
 config BR2_FRAMEWORK_BASIC_C
-    bool "Basic C Framework"
+    bool "Basic C Runtime"
     select BR2_PACKAGE_MINIGUI
     select BR2_PACKAGE_MINIGUI_RES
     select BR2_PACKAGE_MGPLUS
@@ -90,34 +95,8 @@ config BR2_FRAMEWORK_BASIC_C
     select BR2_PACKAGE_HIBUS
     select BR2_PACKAGE_HIDOMLAYOUT
     select BR2_PACKAGE_HISVG
+endmenu # runtime
 
-config BR2_FRAMEWORK_NO_GUI
-    bool "No GUI Framework"
-    select BR2_PACKAGE_HIBOX
-    select BR2_PACKAGE_HIBUS
-
-endchoice
-
-menu "Base Libraries"
-    source "framework/base/Config.in"
-endmenu
-
-menu "Fonts"
-config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
-    bool "iekie fonts (13 MB)"
-    default y
-
-config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
-    bool "adobe fonts (50 MB)"
-endmenu # Fonts
-
-if BR2_FRAMEWORK_HIWEBKIT
-    source "framework/hiwebkit-framework/Config.in"
-endif
-
-if BR2_FRAMEWORK_HIACEJS
-    source "framework/hiacejs-framework/Config.in"
-endif
 
 #if BR2_FRAMEWORK_MGNCS_BASED_C
 #menu "mGNCS-based C Framework"
@@ -133,5 +112,18 @@ endif
 #menu "No GUI Framework"
 #endmenu
 #endif
+
+menu "Fonts"
+config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
+    bool "iekie fonts (13 MB)"
+    default y
+
+config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
+    bool "adobe fonts (50 MB)"
+endmenu # Fonts
+
+menu "Base Libraries"
+    source "framework/base/Config.in"
+endmenu
 
 endmenu # App Framework
