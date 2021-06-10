@@ -16,6 +16,33 @@ config BR2_PACKAGE_HIWEBKIT_ARCH_SUPPORTS
 
 menu "App Framework"
 
+choice
+    prompt "Runmode"
+    default BR2_RUNMODE_MULTI_APP
+    help
+      Select the version of glibc you wish to use.
+
+config BR2_RUNMODE_SINGLE_APP
+    bool "Single App mode"
+
+config BR2_RUNMODE_MULTI_APP
+    bool "Multi-App mode"
+
+endchoice
+
+menu "Fonts"
+config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
+    bool "iekie fonts (13 MB)"
+    default y
+
+config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
+    bool "adobe fonts (50 MB)"
+endmenu # Fonts
+
+menu "Base Libraries"
+    source "framework/base/Config.in"
+endmenu
+
 menu "Runtime"
 comment "hiWebKit Framework needs a glibc toolchain w/ C++, gcc >= 7"
 	depends on BR2_PACKAGE_HIWEBKIT_ARCH_SUPPORTS
@@ -112,18 +139,5 @@ endmenu # runtime
 #menu "No GUI Framework"
 #endmenu
 #endif
-
-menu "Fonts"
-config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
-    bool "iekie fonts (13 MB)"
-    default y
-
-config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
-    bool "adobe fonts (50 MB)"
-endmenu # Fonts
-
-menu "Base Libraries"
-    source "framework/base/Config.in"
-endmenu
 
 endmenu # App Framework
