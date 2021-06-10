@@ -10,4 +10,22 @@ config BR2_PACKAGE_MINIGUI
 	help
           http://www.minigui.org
 
+if BR2_PACKAGE_MINIGUI
+choice
+    prompt "Runmode"
+    default BR2_PACKAGE_MINIGUI_RUNMODE_PROCS
+    help
+      Select the MiniGUI runmode.
 
+config BR2_PACKAGE_MINIGUI_RUNMODE_PROCS
+    bool "procs"
+
+config BR2_PACKAGE_MINIGUI_RUNMODE_THS
+    bool "ths"
+
+config BR2_PACKAGE_MINIGUI_RUNMODE_SA
+    bool "sa"
+
+endchoice
+
+endif
