@@ -96,6 +96,16 @@ endchoice
 
 if BR2_FRAMEWORK_HIWEBKIT
 menu "hiWebKit Framework"
+
+menu "Fonts"
+config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
+    bool "iekie fonts (13 MB)"
+    default y
+
+config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
+    bool "adobe fonts (50 MB)"
+endmenu
+
 menu "Base Libraries"
     source "framework/base/Config.in"
 endmenu
@@ -105,6 +115,16 @@ endif
 
 if BR2_FRAMEWORK_HIACEJS
 menu "hiAceJS Framework"
+
+menu "Fonts"
+config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
+    bool "iekie fonts (13 MB)"
+    default y
+
+config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
+    bool "adobe fonts (50 MB)"
+endmenu
+
 menu "Base Libraries"
     source "framework/base/Config.in"
 endmenu
@@ -114,6 +134,16 @@ endif
 
 if BR2_FRAMEWORK_MGNCS_BASED_C
 menu "mGNCS-based C Framework"
+
+menu "Fonts"
+config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
+    bool "iekie fonts (13 MB)"
+    default y
+
+config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
+    bool "adobe fonts (50 MB)"
+endmenu
+
 menu "Base Libraries"
     source "framework/base/Config.in"
 endmenu
@@ -122,6 +152,16 @@ endif
 
 if BR2_FRAMEWORK_BASIC_C
 menu "Basic C Framework"
+
+menu "Fonts"
+config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
+    bool "iekie fonts (13 MB)"
+    default y
+
+config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
+    bool "adobe fonts (50 MB)"
+endmenu
+
 menu "Base Libraries"
     source "framework/base/Config.in"
 endmenu
@@ -130,6 +170,15 @@ endif
 
 if BR2_FRAMEWORK_NO_GUI
 menu "No GUI Framework"
+
+menu "Fonts"
+config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
+    bool "iekie fonts (13 MB)"
+
+config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
+    bool "adobe fonts (50 MB)"
+endmenu
+
 menu "Base Libraries"
     source "framework/base/Config.in"
 endmenu
