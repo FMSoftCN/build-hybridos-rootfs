@@ -1,3 +1,5 @@
+# 
+
 config BR2_PACKAGE_HIWEBKIT_ARCH_SUPPORTS
 	bool
 	# ARM needs BLX, so v5t+, BE completely untested so disabled
@@ -11,6 +13,8 @@ config BR2_PACKAGE_HIWEBKIT_ARCH_SUPPORTS
 	depends on BR2_USE_MMU # libglib2
 	depends on BR2_TOOLCHAIN_HAS_SYNC_4
 	depends on BR2_PACKAGE_LIBGPG_ERROR_ARCH_SUPPORTS # libgcrypt
+
+menu "App Framework"
 
 choice
     prompt "App Framework"
@@ -94,8 +98,9 @@ config BR2_FRAMEWORK_NO_GUI
 
 endchoice
 
-if BR2_FRAMEWORK_HIWEBKIT
-menu "hiWebKit Framework"
+menu "Base Libraries"
+    source "framework/base/Config.in"
+endmenu
 
 menu "Fonts"
 config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
@@ -104,83 +109,29 @@ config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
 
 config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
     bool "adobe fonts (50 MB)"
-endmenu
+endmenu # Fonts
 
-menu "Base Libraries"
-    source "framework/base/Config.in"
-endmenu
+if BR2_FRAMEWORK_HIWEBKIT
     source "framework/hiwebkit-framework/Config.in"
-endmenu
 endif
 
 if BR2_FRAMEWORK_HIACEJS
-menu "hiAceJS Framework"
-
-menu "Fonts"
-config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
-    bool "iekie fonts (13 MB)"
-    default y
-
-config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
-    bool "adobe fonts (50 MB)"
-endmenu
-
-menu "Base Libraries"
-    source "framework/base/Config.in"
-endmenu
     source "framework/hiacejs-framework/Config.in"
-endmenu
 endif
 
-if BR2_FRAMEWORK_MGNCS_BASED_C
-menu "mGNCS-based C Framework"
+#if BR2_FRAMEWORK_MGNCS_BASED_C
+#menu "mGNCS-based C Framework"
+#endmenu
+#endif
+#
+#if BR2_FRAMEWORK_BASIC_C
+#menu "Basic C Framework"
+#endmenu
+#endif
+#
+#if BR2_FRAMEWORK_NO_GUI
+#menu "No GUI Framework"
+#endmenu
+#endif
 
-menu "Fonts"
-config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
-    bool "iekie fonts (13 MB)"
-    default y
-
-config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
-    bool "adobe fonts (50 MB)"
-endmenu
-
-menu "Base Libraries"
-    source "framework/base/Config.in"
-endmenu
-endmenu
-endif
-
-if BR2_FRAMEWORK_BASIC_C
-menu "Basic C Framework"
-
-menu "Fonts"
-config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
-    bool "iekie fonts (13 MB)"
-    default y
-
-config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
-    bool "adobe fonts (50 MB)"
-endmenu
-
-menu "Base Libraries"
-    source "framework/base/Config.in"
-endmenu
-endmenu
-endif
-
-if BR2_FRAMEWORK_NO_GUI
-menu "No GUI Framework"
-
-menu "Fonts"
-config BR2_PACKAGE_MINIGUI_RES_IEKIE_FONTS
-    bool "iekie fonts (13 MB)"
-
-config BR2_PACKAGE_MINIGUI_RES_ADOBE_FONTS
-    bool "adobe fonts (50 MB)"
-endmenu
-
-menu "Base Libraries"
-    source "framework/base/Config.in"
-endmenu
-endmenu
-endif
+endmenu # App Framework
