@@ -542,6 +542,7 @@ include boot/common.mk
 include linux/linux.mk
 include fs/common.mk
 include framework/framework.mk
+include app/app.mk
 
 # If using a br2-external tree, the BR2_EXTERNAL_$(NAME)_PATH variables
 # are also present in the .config file. Since .config is included after

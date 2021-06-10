@@ -911,15 +911,7 @@ endmenu # Global Option
 
 source "framework/Config.in"
 
-menu "Packages"
-menu "Services"
-	source "package/inetd/Config.in"
-endmenu
-menu "Apps"
-	source "package/hishell/Config.in"
-	source "package/hybridos-lite-demo/Config.in"
-endmenu
-endmenu
+source "app/Config.in"
 
 source "package/Config.in"
 
