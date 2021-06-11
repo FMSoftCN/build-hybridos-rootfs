@@ -1,5 +1,4 @@
 # 
 
-if BR2_RUNMODE_SINGLE_APP
-	source "package/hybridos-lite-demo/Config.in"
-endif
+source "app/user/hishell/Config.in"
+source "app/user/hybridos-lite-demo/Config.in"

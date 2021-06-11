@@ -18,14 +18,14 @@ menu "App Framework"
 
 choice
     prompt "App mode"
-    default BR2_RUNMODE_MULTI_APP
+    default BR2_APPMODE_MULTI_APP
     help
       Select the version of glibc you wish to use.
 
-config BR2_RUNMODE_SINGLE_APP
+config BR2_APPMODE_SINGLE_APP
     bool "Single App mode"
 
-config BR2_RUNMODE_MULTI_APP
+config BR2_APPMODE_MULTI_APP
     bool "Multi-App mode"
 
 endchoice

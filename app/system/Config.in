@@ -2,6 +2,3 @@
 
 source "app/system/settings/Config.in"
 
-if BR2_RUNMODE_MULTI_APP
-source "app/system/hishell/Config.in"
-endif
