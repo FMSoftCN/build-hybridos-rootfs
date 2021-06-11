@@ -17,7 +17,7 @@ config BR2_PACKAGE_HIWEBKIT_ARCH_SUPPORTS
 menu "App Framework"
 
 choice
-    prompt "Runmode"
+    prompt "App mode"
     default BR2_RUNMODE_MULTI_APP
     help
       Select the version of glibc you wish to use.
@@ -45,10 +45,12 @@ config R2_FONTS_CHINESE_ADOBE_SOURCE_HAN_SANS_REGULAR
 comment "English Fonts"
 config BR2_FONTS_ENGLISH_IEKIE_SANS_SERIF_HEI_MEDIUM
     bool "iekie SansSerifHei Latin Medium (48 KB)"
+    default y
     select BR2_PACKAGE_MINIGUI_RES
 
 config BR2_FONTS_ENGLISH_IEKIE_SANS_SERIF_HEI_LIGHT
     bool "iekie SansSerifHei Latin Light (48 KB)"
+    default y
     select BR2_PACKAGE_MINIGUI_RES
 
 endmenu # Fonts
@@ -125,7 +127,7 @@ config BR2_FRAMEWORK_MGNCS_BASED_C
     select BR2_PACKAGE_HISVG
 
 config BR2_FRAMEWORK_BASIC_C
-    bool "Basic C Runtime"
+    bool "Basic MiniGUI C Runtime"
     select BR2_PACKAGE_MINIGUI
     select BR2_PACKAGE_MINIGUI_RES
     select BR2_PACKAGE_MGPLUS
@@ -136,22 +138,7 @@ config BR2_FRAMEWORK_BASIC_C
     select BR2_PACKAGE_HIBUS
     select BR2_PACKAGE_HIDOMLAYOUT
     select BR2_PACKAGE_HISVG
+
 endmenu # runtime
-
-
-#if BR2_FRAMEWORK_MGNCS_BASED_C
-#menu "mGNCS-based C Framework"
-#endmenu
-#endif
-#
-#if BR2_FRAMEWORK_BASIC_C
-#menu "Basic C Framework"
-#endmenu
-#endif
-#
-#if BR2_FRAMEWORK_NO_GUI
-#menu "No GUI Framework"
-#endmenu
-#endif
 
 endmenu # App Framework
