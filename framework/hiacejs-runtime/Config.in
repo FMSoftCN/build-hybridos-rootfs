@@ -1,0 +1,4 @@
+source "framework/hiacejs-runtime/jerryscript/Config.in"
+source "framework/hiacejs-runtime/bounds_checking_function/Config.in"
+source "framework/hiacejs-runtime/hiacejs/Config.in"
+

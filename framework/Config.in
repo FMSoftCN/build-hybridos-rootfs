@@ -60,14 +60,14 @@ menu "Base Libraries"
 endmenu
 
 menu "Runtime"
-comment "hiWebKit Framework needs a glibc toolchain w/ C++, gcc >= 7"
+comment "hiWebKit Runtime needs a glibc toolchain w/ C++, gcc >= 7"
 	depends on BR2_PACKAGE_HIWEBKIT_ARCH_SUPPORTS
 	depends on !BR2_INSTALL_LIBSTDCPP || \
 		!BR2_TOOLCHAIN_USES_GLIBC || \
 		!BR2_TOOLCHAIN_GCC_AT_LEAST_7
 	depends on BR2_USE_MMU
 
-config BR2_FRAMEWORK_HIWEBKIT
+config BR2_RUNTIME_HIWEBKIT
     bool "hiWebKit Runtime"
     default y
 	depends on BR2_INSTALL_LIBSTDCPP
@@ -86,11 +86,11 @@ config BR2_FRAMEWORK_HIWEBKIT
     select BR2_PACKAGE_HISVG
     select BR2_PACKAGE_HIWEBKIT
 
-if BR2_FRAMEWORK_HIWEBKIT
-    source "framework/hiwebkit-framework/Config.in"
+if BR2_RUNTIME_HIWEBKIT
+    source "framework/hiwebkit-runtime/Config.in"
 endif
 
-config BR2_FRAMEWORK_HIACEJS
+config BR2_RUNTIME_HIACEJS
     bool "hiAceJS Runtime"
     default y
     select BR2_PACKAGE_MINIGUI
@@ -107,11 +107,11 @@ config BR2_FRAMEWORK_HIACEJS
     select BR2_PACKAGE_JERRYSCRIPT
     select BR2_PACKAGE_HIACEJS
 
-if BR2_FRAMEWORK_HIACEJS
-    source "framework/hiacejs-framework/Config.in"
+if BR2_RUNTIME_HIACEJS
+    source "framework/hiacejs-runtime/Config.in"
 endif
 
-config BR2_FRAMEWORK_MGNCS_BASED_C
+config BR2_RUNTIME_MGNCS_BASED_C
     bool "mGNCS-based C Runtime"
     select BR2_PACKAGE_MINIGUI
     select BR2_PACKAGE_MINIGUI_RES
@@ -126,7 +126,7 @@ config BR2_FRAMEWORK_MGNCS_BASED_C
     select BR2_PACKAGE_HIDOMLAYOUT
     select BR2_PACKAGE_HISVG
 
-config BR2_FRAMEWORK_BASIC_C
+config BR2_RUNTIME_BASIC_C
     bool "Basic MiniGUI C Runtime"
     select BR2_PACKAGE_MINIGUI
     select BR2_PACKAGE_MINIGUI_RES
