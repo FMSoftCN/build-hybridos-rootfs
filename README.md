@@ -8,6 +8,11 @@
    + [系统要求](#系统要求)
    + [构建步骤](#构建步骤)
    + [修改构建选项](#修改构建选项)
+- [添加软件包](#添加软件包)
+   + [应用目录](#应用目录)
+   + [配置文件](#配置文件)
+   + [.mk 文件](#.mk_文件)
+   + [加入编译菜单](#加入编译菜单)
 - [版权声明](#版权声明)
    + [Special Statement](#special-statement)
 
@@ -176,6 +181,73 @@ $ make menuconfig
 
 ![Target packages hybridos 菜单](docs/img/menuconfig_target_packages_hybridos_application.png)
 
+
+## 添加软件包
+
+该部分内容将介绍如何将一个新的软件包加入到 Build HybridOS rootfs 。
+
+### 应用目录
+
+首先，需要在 app/user/ 目录下建立目录，以 `hybridos-lite-demo` 为例，在 app/user/ 下建建名为 `hybridos-lite-demo` 的目录。
+
+### 配置文件
+
+创建配置文件 `Config.in` 以便于将新的应用加入到软件包管理体系。该配置文件使用 Kconfig 语言来描术，可以参考文件[Kconfig Language](https://www.kernel.org/doc/Documentation/kbuild/kconfig-language.txt)。下面以 `hybridos-lite-demo` 为例来说明，其配置文件内容如下:
+
+```
+config BR2_PACKAGE_HYBRIDOS_LITE_DEMO
+	bool "HybridOS lite samples (556 KB)"
+    select BR2_PACKAGE_MINIGUI
+    select BR2_PACKAGE_MGPLUS
+    select BR2_PACKAGE_MGEFF
+    select BR2_PACKAGE_HIDRMDRIVERS
+    select BR2_PACKAGE_HICAIRO
+    select BR2_PACKAGE_HIBOX
+    select BR2_PACKAGE_HIBUS
+    select BR2_PACKAGE_HIDOMLAYOUT
+    select BR2_PACKAGE_HISVG
+	select BR2_PACKAGE_LIBGLIB2
+	help
+      The sample codes are for HybridOS Lite version,
+      mginit and some samples are inclusive.
+      It illustrates how to build an entire project, which runs in HybridOS Lite.
+	  https://gitlab.fmsoft.cn/hybridos/hybridos-lite
+```
+
+* `config XXX` : 定义唯一标识，用于标识一个软件包，一般尽管 `BR2_PACKAGE_` + 软件包名大写 组成，用下划线链接。
+* `bool XXX` : 表示这是一个可选包，`XXX` 是提示信息，在 `make menuconfig` 里显示为菜单选项。
+* `select XXX` : 表示如果选中当前包，则会自动选中 `XXX` 包
+* `help XXX` : 帮助信息，在 `make menuconfig` 时，使用 `?` 可以显示该信息
+
+### .mk 文件
+
+创建以`软件包 + .mk` 命名的文件，该文件使用 Makefile 语法来描述。它主要描述了如何下载、配置、构建、安装软件包。以 `hybridos-lite-demo.mk` 为例:
+
+```
+HYBRIDOS_LITE_DEMO_SITE = https://gitlab.fmsoft.cn/hybridos/hybridos-lite
+HYBRIDOS_LITE_DEMO_VERSION = 654478f97a699b1fd0a4985f09b1b14018fbd291
+HYBRIDOS_LITE_DEMO_SITE_METHOD = git
+HYBRIDOS_LITE_DEMO_INSTALL_STAGING = YES
+HYBRIDOS_LITE_DEMO_DEPENDENCIES = libglib2 minigui mgeff hicairo hicairo hisvg
+
+$(eval $(cmake-package))
+```
+
+* `HYBRIDOS_LITE_DEMO_SITE` : 源码的下载地址。
+* `HYBRIDOS_LITE_DEMO_VERSION` : 版本信息，对于 git 来说，这里可以使用 tag name 或者 commit。
+* `HYBRIDOS_LITE_DEMO_SITE_METHOD` : 源码获取方式，支持多种方式: wget, scp, svn, cvs, git, hg, bzr, file, local。
+* `HYBRIDOS_LITE_DEMO_INSTALL_STAGING`: 是否安装到 staging 目录，如果该软件包会被别的软件包依赖，比如头文件，则该选项需要为 `YES`。
+* `HYBRIDOS_LITE_DEMO_DEPENDENCIES` : 配置依赖包，系统保证先编译依赖包。
+* `$(eval $(cmake-package))` : 表示该软件包使用 `cmake` 进行编译。支持 autotools, cmake, python, meson 等编译工具。
+
+### 加入编译菜单
+
+编译文件 `app/user/Config.in` 使用 source 命令将新软件包的 Config.in 引入，之后就可以在 `make menuconfig` 菜单中看到该软件包，方法如下:
+
+```
+source "app/user/hybridos-lite-demo/Config.in"
+```
+至此，已经完成将软件包加入到 Build HybridOS rootfs。
 
 ## 版权声明
 
