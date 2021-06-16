@@ -1,5 +1,5 @@
 HISVG_SITE = https://gitlab.fmsoft.cn/hybridos/hisvg
-HISVG_VERSION = 201a9cb3af17d3bdaf579cb17ac024f62125d5b3
+HISVG_VERSION = b21fb291f7d1ec9f0eb77d40594df3482c85facb
 HISVG_SITE_METHOD = git
 HISVG_INSTALL_STAGING = YES
 
