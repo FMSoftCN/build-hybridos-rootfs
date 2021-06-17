@@ -7,6 +7,7 @@ HISHELL_DEPENDENCIES = mgeff hicairo hiwebkit hiacejs hisvg hidomlayout
 
 
 define HISHELL_INSTALL_FONT
+    $(INSTALL) -c -m 644 $(HISHELL_PKGDIR)/MiniGUI.cfg $(TARGET_DIR)/usr/libexec
 	cd $(TARGET_DIR)/usr/libexec/samples/app/fonts/ && ln -sf /usr/share/fonts/sans-serif-hei-chinese-medium.ttf SourceHanSansSC-Regular.otf
 endef
 HISHELL_POST_INSTALL_TARGET_HOOKS += HISHELL_INSTALL_FONT
