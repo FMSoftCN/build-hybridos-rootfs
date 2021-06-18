@@ -6,11 +6,12 @@ HISHELL_INSTALL_STAGING = YES
 HISHELL_DEPENDENCIES = mgeff hicairo hiwebkit hiacejs hisvg hidomlayout
 
 
-define HISHELL_INSTALL_FONT
+define HISHELL_INSTALL_CONFIG
     $(INSTALL) -c -m 644 $(HISHELL_PKGDIR)/MiniGUI.cfg $(TARGET_DIR)/usr/libexec
     $(INSTALL) -c -m 644 $(HISHELL_PKGDIR)/hybridos.cfg $(TARGET_DIR)/usr/libexec
+    $(INSTALL) -c -m 755 $(HISHELL_PKGDIR)/run.sh $(TARGET_DIR)/usr/libexec
 	cd $(TARGET_DIR)/usr/libexec/samples/app/fonts/ && ln -sf /usr/share/fonts/sans-serif-hei-chinese-medium.ttf SourceHanSansSC-Regular.otf
 endef
-HISHELL_POST_INSTALL_TARGET_HOOKS += HISHELL_INSTALL_FONT
+HISHELL_POST_INSTALL_TARGET_HOOKS += HISHELL_INSTALL_CONFIG
 
 $(eval $(cmake-package))

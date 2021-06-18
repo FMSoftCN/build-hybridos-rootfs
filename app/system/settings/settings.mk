@@ -1,7 +1,16 @@
 SETTINGS_SITE = https://gitlab.fmsoft.cn/hybridos/cn.fmsoft.hybridos.settings
-SETTINGS_VERSION = 3a5bf123095fced6b4c8015ea3f79f41d38ffb16
+SETTINGS_VERSION = bc8cb68e3fb8e0e5d0c8b7b0b2cfa00c155c00c9
 SETTINGS_SITE_METHOD = git
 SETTINGS_INSTALL_STAGING = YES
 SETTINGS_DEPENDENCIES = hibox hibus
+
+ifeq ($(BR2_TARGET_NAME_r818),y)
+	SETTINGS_CONF_OPTS += -DPLATFORM_R818=ON
+endif
+
+define SETTINGS_INSTALL_CONFIG
+    $(INSTALL) -c -m 644 $(SETTINGS_PKGDIR)/inetd.cfg $(TARGET_DIR)/usr/libexec
+endef
+SETTINGS_POST_INSTALL_TARGET_HOOKS += SETTINGS_INSTALL_CONFIG
 
 $(eval $(cmake-package))
