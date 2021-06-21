@@ -13,6 +13,11 @@
    + [配置文件](#配置文件)
    + [.mk 文件](#.mk_文件)
    + [加入编译菜单](#加入编译菜单)
+- [发布日志](发布日志)
+   + [r2106](r2106)
+      * [r2106 有如下更新](#r2106-有如下更新)
+      * [r818](#r818)
+      * [px30](#px30)
 - [版权声明](#版权声明)
    + [Special Statement](#special-statement)
 
@@ -248,6 +253,83 @@ $(eval $(cmake-package))
 source "app/user/hybridos-lite-demo/Config.in"
 ```
 至此，已经完成将软件包加入到 Build HybridOS rootfs。
+
+## 发布日志
+
+### r2106
+
+HybridOS 开发团队发布Building HybridOS rootfs r2106，这是 Building HybridOS rootfs 的第一个发布版本。
+
+#### r2106 有如下更新:
+
+* 增加了 build 目录，用于存放相关构建脚本。
+* 增加了 lunch 命令，用于列出支持的构建目标菜单，便于选对。
+* 移除了 Buildroot 中不需要的软件包。
+* 重新组织了 make menuconfig 主菜单。
+* 支持 全志 r818 开发板。
+* 支持 瑞芯微 px30 开发板。
+
+#### r818
+
+r818 提供两种方式，第一种方式使用完整刷机包直接刷机即可，刷机包的下载地址如下:
+
+* [HybridOS 固件](https://hybridos.fmsoft.cn/downloads/r2106/r818_hybridos.img)
+* [HybridOS 安全固件](https://hybridos.fmsoft.cn/downloads/r2106/r818_hybridos_s.img)
+* [HybridOS Lite 固件](https://hybridos.fmsoft.cn/downloads/r2106/r818_lite.img)
+* [HybridOS Lite 安全固件](https://hybridos.fmsoft.cn/downloads/r2106/r818_lite_s.img)
+
+第二种方式使用软件包，下载地址如下:
+
+* [HybridOS rootfs](https://hybridos.fmsoft.cn/downloads/r2106/r818_rootfs_hybridos.tar.gz)
+* [HybridOS Lite rootfs](https://hybridos.fmsoft.cn/downloads/r2106/r818_rootfs_lite.tar.gz)
+
+
+以 HybridOS rootfs 为例说明如何运行
+
+* 将设备用usb连接到PC上
+* 在PC终端使用adb命令将 HybridOS R818软件包推送到设备上/mnt/UDISK 目录
+
+``` shell
+$ adb push r818_rootfs_hybridos.tar.gz /mnt/UDISK/
+```
+
+* 在PC终端使用adb命令打开设备的控制台
+
+```shell
+$ adb shell
+root@TinaLinux:/#
+```
+
+* 在设备控制台执行以下命令进行安装和运行
+
+```shell
+root@TinaLinux:/# cd /mnt/UDISK
+root@TinaLinux:/mnt/UDISK# tar zxvf r818_rootfs_hybridos.tar.gz  # 解压后会看到一个rootfs目录 
+root@TinaLinux:/mnt/UDISK# cd rootfs
+root@TinaLinux:/mnt/UDISK/sysroot# . ./run.sh  #  运行
+```
+
+#### px30
+
+px30 暂时只提供软件包的方式，下载地址如下:
+
+* [HybridOS rootfs](https://hybridos.fmsoft.cn/downloads/r2106/px30_rootfs_hybridos.tar.gz)
+* [HybridOS Lite rootfs](https://hybridos.fmsoft.cn/downloads/r2106/px30_rootfs_lite.tar.gz)
+
+以 HybridOS rootfs 为例说明如何安装运行
+
+* 将 px30_rootfs_hybridos.tar.gz 放到主板 /userdata 目录下
+
+``` shell
+
+# tar zcvf px30_rootfs_hybridos.tar.gz
+# cd px30_rootfs_hybridos
+# . ./setup.sh
+# reboot
+
+```
+
+当PX30开发板重新启动后，既可以看见HybridOS界面，并可以通过触摸屏进行操作
 
 ## 版权声明
 
