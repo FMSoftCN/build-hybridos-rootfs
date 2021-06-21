@@ -26,4 +26,9 @@ ifeq ($(BR2_TARGET_NAME_r818),y)
 	MINIGUI_CONF_OPTS += --with-targetname=r818
 endif
 
+ifeq ($(BR2_TARGET_NAME_px30),y)
+MINIGUI_VERSION = 22bbe8e70934aba7142be718f75706a41ad60975
+	MINIGUI_CONF_OPTS += --with-targetname=px30
+endif
+
 $(eval $(autotools-package))
