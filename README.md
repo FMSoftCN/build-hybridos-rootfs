@@ -108,38 +108,51 @@ $ sudo apt install git g++ binutils autoconf automake libtool make cmake pkg-con
 
 ### 构建步骤
 
-* 列出配置文件
+* 设置环境变量
 
 ```
-$ make list-defconfigs
-
-  hybridos_defconfig                  - Build for hybridos
-  hybridos_lite_defconfig             - Build for hybridos_lite
-  r818_hybridos_defconfig             - Build for r818_hybridos
-  r818_hybridos_lite_defconfig        - Build for r818_hybridos_lite
+$ build/envsetup.sh
 ```
 
-如上所示，当前内置了四个配置文件，它们是:
+* 选择目标
 
-- `hybridos_defconfig` ：默认编译 HybridOS 的配置
-- `hybridos_lite_defconfig` ：默认编译 HybridOS Lite 的配置
-- `r818_hybridos_defconfig` ：为全志 r818 编译 HybridOS 的配置
-- `r818_hybridos_lite_defconfig` ：为全志 r818 编译 HybridOS Lite 的配置
+```shell
+$ lunch
 
+You're building on Linux
 
-* 选择配置文件
+Lunch menu... pick a combo:
+     1. hybridos
+     2. hybridos_lite
+     3. px30_hybridos
+     4. px30_hybridos_lite
+     5. r818_hybridos
+     6. r818_hybridos_lite
 
-直接使用 `make` + 配置文件名 即可完成配置文件的选择
+Which would you like? [Default r818_hybridos]:
 
 ```
-$ make hybridos_defconfig
-```
+
+如上所示，当前内置了六个配置，它们是:
+
+- `hybridos` ：默认编译 HybridOS 的配置
+- `hybridos_lite` ：默认编译 HybridOS Lite 的配置
+- `r818_hybridos` ：为全志 r818 编译 HybridOS 的配置
+- `r818_hybridos_lite` ：为全志 r818 编译 HybridOS Lite 的配置
+- `px30_hybridos` ：为全志 px30 编译 HybridOS 的配置
+- `px30_hybridos_lite` ：为全志 px30 编译 HybridOS Lite 的配置
+
 
 * 启动编译，并等待编译完成
 
-```
+直接使用 `make` 命令或者内置命令 `m` 进行编译
+
+```shell
 $ make
+# 或
+$ m
 ```
+
 *  编译完成后，可以在 output/images 找到 `rootfs.tar`
 
 ### 修改构建选项
