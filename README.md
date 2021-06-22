@@ -181,6 +181,28 @@ $ make menuconfig
 
 ![Toolchain 菜单](docs/img/menu_global_options_toolchain.png)
 
+* `App Framework` : 应用程序框架
+
+![App Framework 菜单](docs/img/menu_app_framework.png)
+
+* `App Framework --> App mode` : 应用模型
+
+![App Framework --> App mode 菜单](docs/img/menu_app_framework_appmode.png)
+
+* `App Framework --> Fonts` :  字体
+
+![App Framework --> Fonts 菜单](docs/img/menu_app_framework_fonts.png)
+
+* `App Framework --> Base Libraries` : 基础软件包菜单
+
+![App Framework --> Base Libraries 菜单](docs/img/menu_app_framework_base_libraries.png)
+
+
+* `App Framework --> Runtime` : 应用程序运行时
+
+![App Framework --> Runtime 菜单](docs/img/menu_app_framework_base_runtime.png)
+
+
 * `Target packages` : 修改要编译的软件包
 
 ![Target packages 菜单](docs/img/menuconfig_target_package.png)
