@@ -215,28 +215,13 @@ $ make menuconfig
 
 ![App --> User 菜单](docs/img/menu_app_user.png)
 
-* `Target packages` : 修改要编译的软件包
+* `External packages` : 外部软件包
 
-![Target packages 菜单](docs/img/menuconfig_target_package.png)
+![External packages 菜单](docs/img/menu_externel_packages.png)
 
+* `Other` : 其它
 
-* `Target packages --> HybridOS` : HybridOS 主要相关软件包的菜单
-
-![Target packages hybridos 菜单](docs/img/menuconfig_target_packages_hybridos.png)
-
-
-* `Target packages --> HybridOS --> HybridOS Base Libraries` : HybridOS 基础软件包菜单
-
-![Target packages hybridos 菜单](docs/img/menuconfig_target_packages_hybridos_base_libraries.png)
-
-* `Target packages --> HybridOS --> HybridOS Runtime` : HybridOS Runtime 软件包菜单
-
-![Target packages hybridos 菜单](docs/img/menuconfig_target_packages_hybridos_runtime.png)
-
-* `Target packages --> HybridOS --> Applications` : HybridOS Applications 软件包菜单
-
-![Target packages hybridos 菜单](docs/img/menuconfig_target_packages_hybridos_application.png)
-
+![Other 菜单](docs/img/menu_other.png)
 
 ## 添加软件包
 
