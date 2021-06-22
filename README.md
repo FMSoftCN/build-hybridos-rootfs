@@ -200,7 +200,7 @@ $ make menuconfig
 
 * `App Framework --> Runtime` : 应用程序运行时
 
-![App Framework --> Runtime 菜单](docs/img/menu_app_framework_base_runtime.png)
+![App Framework --> Runtime 菜单](docs/img/menu_app_framework_runtime.png)
 
 
 * `Target packages` : 修改要编译的软件包
