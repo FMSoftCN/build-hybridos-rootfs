@@ -13,8 +13,8 @@
    + [配置文件](#配置文件)
    + [.mk 文件](#.mk_文件)
    + [加入编译菜单](#加入编译菜单)
-- [发布日志](发布日志)
-   + [r2106](r2106)
+- [发布日志](#发布日志)
+   + [r2106](#r2106)
       * [r2106 有如下更新](#r2106-有如下更新)
       * [r818](#r818)
       * [px30](#px30)
@@ -271,14 +271,15 @@ source "app/user/hybridos-lite-demo/Config.in"
 
 ### r2106
 
-HybridOS 开发团队发布Building HybridOS rootfs r2106，这是 Building HybridOS rootfs 的第一个发布版本。
+HybridOS 开发团队发布 HybridOS r2106。
 
 #### r2106 有如下更新:
 
-* 增加了 build 目录，用于存放相关构建脚本。
-* 增加了 lunch 命令，用于列出支持的构建目标菜单，便于选对。
-* 移除了 Buildroot 中不需要的软件包。
-* 重新组织了 make menuconfig 主菜单。
+* 使用 Build HybridOS rootfs 构建
+* Build HybridOS rootfs 增加了 build 目录，用于存放相关构建脚本。
+* Build HybridOS rootfs 增加了 lunch 命令，用于列出支持的构建目标菜单，便于选对。
+* Build HybridOS rootfs 移除了 Buildroot 中不需要的软件包。
+* Build HybridOS rootfs 重新组织了 make menuconfig 主菜单。
 * 支持 全志 r818 开发板。
 * 支持 瑞芯微 px30 开发板。
 
