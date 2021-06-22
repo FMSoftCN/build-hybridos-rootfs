@@ -163,7 +163,7 @@ $ m
 $ make menuconfig
 ```
 
-![menuconfig 菜单](docs/img/menuconfig.png)
+![menuconfig 菜单](docs/img/menu.png)
 
 
 下面简单介绍一下主要的菜单，如下:
