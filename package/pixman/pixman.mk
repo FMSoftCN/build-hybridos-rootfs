@@ -1,12 +1,12 @@
-################################################################################
+###############################################################################
 #
 # pixman
 #
 ################################################################################
 
-PIXMAN_VERSION = 0.38.4
-PIXMAN_SOURCE = pixman-$(PIXMAN_VERSION).tar.bz2
-PIXMAN_SITE = http://xorg.freedesktop.org/releases/individual/lib
+PIXMAN_VERSION = hbd
+PIXMAN_SOURCE = pixman-$(PIXMAN_VERSION).tar.gz
+PIXMAN_SITE = https://hybridos.fmsoft.cn/downloads/packages
 PIXMAN_LICENSE = MIT
 PIXMAN_LICENSE_FILES = COPYING
 
@@ -35,6 +35,10 @@ ifeq ($(BR2_ARM_CPU_HAS_ARM)$(BR2_ARM_CPU_HAS_NEON),yy)
 PIXMAN_CONF_OPTS += --enable-arm-neon
 else
 PIXMAN_CONF_OPTS += --disable-arm-neon
+endif
+
+ifeq ($(BR2_aarch64),y)
+PIXMAN_CONF_OPTS += --enable-arm-a64-neon
 endif
 
 # disable iwmmxt support for CPU's that don't have
