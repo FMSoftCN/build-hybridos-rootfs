@@ -169,13 +169,17 @@ $ make menuconfig
 下面简单介绍一下主要的菜单，如下:
 
 
-* `Target options` : 修改目标平台内容，比如CPU类型，浮点数处理等等，如下图所示：
+* `Global options` : 全局的配置选项
 
-![Target option 菜单](docs/img/menuconfig_target_option.png)
+![Global option 菜单](docs/img/menu_global_options.png)
 
-* `Toolchain` : 修改工具链相关选项，比如 gcc, glibc 等
+* `Global options --> Target options` : 修改目标平台内容，比如CPU类型，浮点数处理等等，如下图所示：
 
-![Toolchain 菜单](docs/img/menuconfig_toolchain.png)
+![Target option 菜单](docs/img/menu_global_options_target_options.png)
+
+* `Global options --> Toolchain` : 修改工具链相关选项，比如 gcc, glibc 等
+
+![Toolchain 菜单](docs/img/menu_global_options_toolchain.png)
 
 * `Target packages` : 修改要编译的软件包
 
