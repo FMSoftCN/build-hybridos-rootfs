@@ -203,6 +203,18 @@ $ make menuconfig
 ![App Framework --> Runtime 菜单](docs/img/menu_app_framework_runtime.png)
 
 
+* `App` : 应用程序
+
+![App菜单](docs/img/menu_app.png)
+
+* `App --> System` : 系统程序
+
+![App --> System 菜单](docs/img/menu_app_system.png)
+
+* `App --> User` : 用户程序
+
+![App --> User 菜单](docs/img/menu_app_user.png)
+
 * `Target packages` : 修改要编译的软件包
 
 ![Target packages 菜单](docs/img/menuconfig_target_package.png)
